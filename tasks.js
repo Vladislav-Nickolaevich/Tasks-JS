@@ -1,0 +1,550 @@
+// const factorial = n => {
+//     let res = 0;
+//     if(n == 0 || n == 1){
+//         return 1;
+//     }   else {
+//         res = n * factorial(n - 1);
+//     }
+//     return res;
+//   };
+// console.log(factorial(0));
+// console.log(factorial(1));
+// console.log(factorial(3));
+// console.log(factorial(4));
+// console.log(factorial(5));
+
+// function strong(n) {
+//     let arr = (String(n)).split('');
+//     let sumA = 0;
+//     let sumB = 0;
+//     if(arr.length == 1){
+//     //   return  n == 1? 1: n * strong(n - 1);
+//         let c = arr.map(item => {
+//             if(item == 1 || item == 2){
+//                  sumA = +item;
+//                 // console.log(sumA)
+//             } else{
+//                  sumB = item * strong(item - 1);
+//                 //  console.log(sumB)
+//             }
+//         });
+        
+//         if(+c == n ){
+//             return "STRONG!!!!";
+//         } else{
+//             return "Not Strong !!";
+//         }
+//     } else if( arr.length > 1) {
+
+//         let b = arr.map(item => {
+//             if(item == 1){
+//                 return sumA = +item;
+//             } else {
+//                 return sumB = item * strong(item - 1);
+//             }
+//             // return sumA + sumB;
+//         }).reduce((s,c) => s + c, 0);
+//         if(b == n ){
+//             return "STRONG!!!!";
+//         } else{
+//             return "Not Strong !!";
+//         }
+//     }
+
+// }
+// console.log(strong(2));
+// console.log(strong(145));
+// // console.log(strong(2));
+// // console.log(strong(1));
+// // console.log(strong(5));
+
+
+
+// function removeSmallest(numbers) {
+//     if(numbers.length > 0){
+//         let numSort = [...numbers].sort((a, b) => a - b)[0];
+//         let numbersNew = [...numbers];
+//         let numInd = numbersNew.findIndex(item => item == numSort);
+//         numbersNew.splice(numInd, 1);
+//         return numbersNew;
+//     } else {
+//         return numbers;
+//     }
+//   }
+// console.log(removeSmallest([1, 2, 3, 4, 5]));
+// console.log(removeSmallest([5, 3, 2, 1, 4]));
+// console.log(removeSmallest([2, 2, 1, 2, 1]));
+
+// function dotCalculator (equation) {
+//     let [a, op, b] = equation.split(" ");
+//     a = a.split('').length;
+//     b = b.split('').length;
+
+//     const operations = {
+//         "+": a + b,
+//         "-": a - b,
+//         "*": a * b,
+//         "//": a / b,
+//     };
+
+//     return ".".repeat(operations[op]);
+// }
+
+//   console.log(dotCalculator('..'))
+//   console.log(dotCalculator('.... + ....'))
+//   console.log(dotCalculator('..... // ..'))
+
+
+// function outed(meet, boss){
+//    let meetLength = Object.values(meet).length;
+//    let indexBoss = Object.keys(meet).findIndex((item) => item == boss);
+//    let sum = Object.values(meet).map((item,i) => i == indexBoss? item * 2: item).reduce((s,c) => s+ c);
+    
+//     if(sum / meetLength <= 5){
+//         return  'Get Out Now!';
+//     } else {
+//         return 'Nice Work Champ!';
+//     }
+
+// }
+
+
+// console.log(outed({'tim':0, 'jim':2, 'randy':0, 'sandy':7, 'andy':0, 'katie':5, 'laura':1, 'saajid':2, 'alex':3, 'john':2, 'mr':0}, 'laura'));
+
+// console.log(outed({'tim':1, 'jim':3, 'randy':9, 'sandy':6, 'andy':7, 'katie':6, 'laura':9, 'saajid':9, 'alex':9, 'john':9, 'mr':8}, 'katie'));
+
+// console.log(outed({'tim':2, 'jim':4, 'randy':0, 'sandy':5, 'andy':8, 'katie':6, 'laura':2, 'saajid':2, 'alex':3, 'john':2, 'mr':8}, 'john'));
+
+
+
+
+// _______________________________________________
+// const urlResponse = 'https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=hWfHpLg4xMevjAzG0kz1nsknGcod7WD7';
+
+// function get(url){
+//     return fetch(url);
+// }
+
+// get(urlResponse)
+//     .then(response => response.json())
+//     .then(data => getWeather(data))
+
+
+// function getWeather(a, one, two, three){
+//     let day = a.data.timelines[0].intervals;
+
+//     // Data
+//     let dayDataOne = (day[one].startTime).slice(0, 10);
+//     let dayDataTwo = (day[two].startTime).slice(0, 10);
+//     let dayDataThree = (day[three].startTime).slice(0, 10);
+//     // Temperature
+//     let dayOneTemperature = day[one].values.temperature;
+//     let dayTwoTemperature = day[two].values.temperature;
+//     let dayThreeTemperature = day[three].values.temperature;
+
+//     //set data
+//     document.querySelector('.data-one').append(dayDataOne);
+//     document.querySelector('.data-two').append(dayDataTwo);
+//     document.querySelector('.data-three').append(dayDataThree);
+//     //set temperature
+//     document.querySelector('.degree-one').append(dayOneTemperature);
+//     document.querySelector('.degree-two').append(dayTwoTemperature);
+//     document.querySelector('.degree-three').append(dayThreeTemperature);
+// }
+
+// let now = new Date();
+// let today = new Date().toISOString().slice(0, 13)
+// let tomorrow = new Date(now.getTime() + (24 * 60 * 60 * 1000)).toISOString().slice(0, 13)
+// let dayAfterTomorrow = new Date(now.getTime() + (48 * 60 * 60 * 1000)).toISOString().slice(0, 13)
+// console.log(today )
+// console.log(tomorrow )
+// console.log(dayAfterTomorrow )
+
+
+
+
+// ______________________________________________________________
+
+
+// const urlResponse = 'https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=hWfHpLg4xMevjAzG0kz1nsknGcod7WD7';
+
+// function get(url){
+//     return fetch(url);
+// }
+
+// get(urlResponse)
+//     .then(response => response.json())
+//     .then(data => getWeather(data));
+
+
+// let obj = {"data":{"timelines":[{"timestep":"1h","endTime":"2022-07-13T23:00:00Z","startTime":"2022-07-09T11:00:00Z","intervals":[{"startTime":"2022-07-09T11:00:00Z","values":{"temperature":-48.9}},{"startTime":"2022-07-09T12:00:00Z","values":{"temperature":-48.63}},{"startTime":"2022-07-09T13:00:00Z","values":{"temperature":-48.43}},{"startTime":"2022-07-09T14:00:00Z","values":{"temperature":-48.56}},{"startTime":"2022-07-09T15:00:00Z","values":{"temperature":-47.79}},{"startTime":"2022-07-09T16:00:00Z","values":{"temperature":-48.21}},{"startTime":"2022-07-09T17:00:00Z","values":{"temperature":-49.55}},{"startTime":"2022-07-09T18:00:00Z","values":{"temperature":-49.27}},{"startTime":"2022-07-09T19:00:00Z","values":{"temperature":-50}},{"startTime":"2022-07-09T20:00:00Z","values":{"temperature":-50.36}},{"startTime":"2022-07-09T21:00:00Z","values":{"temperature":-50.63}},{"startTime":"2022-07-09T22:00:00Z","values":{"temperature":-50.27}},{"startTime":"2022-07-09T23:00:00Z","values":{"temperature":-49.7}},{"startTime":"2022-07-10T00:00:00Z","values":{"temperature":-49.22}},{"startTime":"2022-07-10T01:00:00Z","values":{"temperature":-48.64}},{"startTime":"2022-07-10T02:00:00Z","values":{"temperature":-48.33}},{"startTime":"2022-07-10T03:00:00Z","values":{"temperature":-48.23}},{"startTime":"2022-07-10T04:00:00Z","values":{"temperature":-48.34}},{"startTime":"2022-07-10T05:00:00Z","values":{"temperature":-48.46}},{"startTime":"2022-07-10T06:00:00Z","values":{"temperature":-48.54}},{"startTime":"2022-07-10T07:00:00Z","values":{"temperature":-48.63}},{"startTime":"2022-07-10T08:00:00Z","values":{"temperature":-48.82}},{"startTime":"2022-07-10T09:00:00Z","values":{"temperature":-49.14}},{"startTime":"2022-07-10T10:00:00Z","values":{"temperature":-49.56}},{"startTime":"2022-07-10T11:00:00Z","values":{"temperature":-50.12}},{"startTime":"2022-07-10T12:00:00Z","values":{"temperature":-50.67}},{"startTime":"2022-07-10T13:00:00Z","values":{"temperature":-51}},{"startTime":"2022-07-10T14:00:00Z","values":{"temperature":-51.31}},{"startTime":"2022-07-10T15:00:00Z","values":{"temperature":-51.83}},{"startTime":"2022-07-10T16:00:00Z","values":{"temperature":-52.47}},{"startTime":"2022-07-10T17:00:00Z","values":{"temperature":-53.09}},{"startTime":"2022-07-10T18:00:00Z","values":{"temperature":-53.7}},{"startTime":"2022-07-10T19:00:00Z","values":{"temperature":-54.41}},{"startTime":"2022-07-10T20:00:00Z","values":{"temperature":-55.13}},{"startTime":"2022-07-10T21:00:00Z","values":{"temperature":-55.66}},{"startTime":"2022-07-10T22:00:00Z","values":{"temperature":-55.99}},{"startTime":"2022-07-10T23:00:00Z","values":{"temperature":-56.14}},{"startTime":"2022-07-11T00:00:00Z","values":{"temperature":-56.21}},{"startTime":"2022-07-11T01:00:00Z","values":{"temperature":-56.25}},{"startTime":"2022-07-11T02:00:00Z","values":{"temperature":-56.31}},{"startTime":"2022-07-11T03:00:00Z","values":{"temperature":-56.32}},{"startTime":"2022-07-11T04:00:00Z","values":{"temperature":-56.3}},{"startTime":"2022-07-11T05:00:00Z","values":{"temperature":-56.23}},{"startTime":"2022-07-11T06:00:00Z","values":{"temperature":-56.17}},{"startTime":"2022-07-11T07:00:00Z","values":{"temperature":-56.22}},{"startTime":"2022-07-11T08:00:00Z","values":{"temperature":-56.18}},{"startTime":"2022-07-11T09:00:00Z","values":{"temperature":-55.9}},{"startTime":"2022-07-11T10:00:00Z","values":{"temperature":-55.67}},{"startTime":"2022-07-11T11:00:00Z","values":{"temperature":-55.72}},{"startTime":"2022-07-11T12:00:00Z","values":{"temperature":-55.6}},{"startTime":"2022-07-11T13:00:00Z","values":{"temperature":-55.57}},{"startTime":"2022-07-11T14:00:00Z","values":{"temperature":-55.63}},{"startTime":"2022-07-11T15:00:00Z","values":{"temperature":-55.71}},{"startTime":"2022-07-11T16:00:00Z","values":{"temperature":-55.83}},{"startTime":"2022-07-11T17:00:00Z","values":{"temperature":-56.03}},{"startTime":"2022-07-11T18:00:00Z","values":{"temperature":-56.3}},{"startTime":"2022-07-11T19:00:00Z","values":{"temperature":-56.49}},{"startTime":"2022-07-11T20:00:00Z","values":{"temperature":-56.62}},{"startTime":"2022-07-11T21:00:00Z","values":{"temperature":-56.75}},{"startTime":"2022-07-11T22:00:00Z","values":{"temperature":-56.83}},{"startTime":"2022-07-11T23:00:00Z","values":{"temperature":-56.99}},{"startTime":"2022-07-12T00:00:00Z","values":{"temperature":-57.22}},{"startTime":"2022-07-12T01:00:00Z","values":{"temperature":-57.33}},{"startTime":"2022-07-12T02:00:00Z","values":{"temperature":-57.31}},{"startTime":"2022-07-12T03:00:00Z","values":{"temperature":-57.28}},{"startTime":"2022-07-12T04:00:00Z","values":{"temperature":-57.5}},{"startTime":"2022-07-12T05:00:00Z","values":{"temperature":-57.47}},{"startTime":"2022-07-12T06:00:00Z","values":{"temperature":-57.66}},{"startTime":"2022-07-12T07:00:00Z","values":{"temperature":-57.65}},{"startTime":"2022-07-12T08:00:00Z","values":{"temperature":-57.87}},{"startTime":"2022-07-12T09:00:00Z","values":{"temperature":-58.28}},{"startTime":"2022-07-12T10:00:00Z","values":{"temperature":-58.8}},{"startTime":"2022-07-12T11:00:00Z","values":{"temperature":-59.5}},{"startTime":"2022-07-12T12:00:00Z","values":{"temperature":-59.9}},{"startTime":"2022-07-12T13:00:00Z","values":{"temperature":-60.45}},{"startTime":"2022-07-12T14:00:00Z","values":{"temperature":-60.92}},{"startTime":"2022-07-12T15:00:00Z","values":{"temperature":-61.31}},{"startTime":"2022-07-12T16:00:00Z","values":{"temperature":-61.73}},{"startTime":"2022-07-12T17:00:00Z","values":{"temperature":-62.24}},{"startTime":"2022-07-12T18:00:00Z","values":{"temperature":-62.55}},{"startTime":"2022-07-12T19:00:00Z","values":{"temperature":-62.72}},{"startTime":"2022-07-12T20:00:00Z","values":{"temperature":-62.65}},{"startTime":"2022-07-12T21:00:00Z","values":{"temperature":-62.54}},{"startTime":"2022-07-12T22:00:00Z","values":{"temperature":-62.52}},{"startTime":"2022-07-12T23:00:00Z","values":{"temperature":-62.35}},{"startTime":"2022-07-13T00:00:00Z","values":{"temperature":-62.15}},{"startTime":"2022-07-13T01:00:00Z","values":{"temperature":-61.93}},{"startTime":"2022-07-13T02:00:00Z","values":{"temperature":-61.8}},{"startTime":"2022-07-13T03:00:00Z","values":{"temperature":-61.7}},{"startTime":"2022-07-13T04:00:00Z","values":{"temperature":-61.53}},{"startTime":"2022-07-13T05:00:00Z","values":{"temperature":-61.4}},{"startTime":"2022-07-13T06:00:00Z","values":{"temperature":-61.18}},{"startTime":"2022-07-13T07:00:00Z","values":{"temperature":-60.81}},{"startTime":"2022-07-13T08:00:00Z","values":{"temperature":-60.6}},{"startTime":"2022-07-13T09:00:00Z","values":{"temperature":-60.2}},{"startTime":"2022-07-13T10:00:00Z","values":{"temperature":-59.82}},{"startTime":"2022-07-13T11:00:00Z","values":{"temperature":-59.4}},{"startTime":"2022-07-13T12:00:00Z","values":{"temperature":-58.93}},{"startTime":"2022-07-13T13:00:00Z","values":{"temperature":-58.42}},{"startTime":"2022-07-13T14:00:00Z","values":{"temperature":-57.75}},{"startTime":"2022-07-13T15:00:00Z","values":{"temperature":-56.87}},{"startTime":"2022-07-13T16:00:00Z","values":{"temperature":-55.84}},{"startTime":"2022-07-13T17:00:00Z","values":{"temperature":-54.47}},{"startTime":"2022-07-13T18:00:00Z","values":{"temperature":-51.64}},{"startTime":"2022-07-13T19:00:00Z","values":{"temperature":-47.54}},{"startTime":"2022-07-13T20:00:00Z","values":{"temperature":-45.44}},{"startTime":"2022-07-13T21:00:00Z","values":{"temperature":-43.98}},{"startTime":"2022-07-13T22:00:00Z","values":{"temperature":-43.18}},{"startTime":"2022-07-13T23:00:00Z","values":{"temperature":-42.77}}]}]}};
+// getWeather(obj);
+// function getWeather(mainData){
+//     const day = mainData.data.timelines[0].intervals;
+//     const now = new Date().getHours();
+//     let dayDataOne;
+//     let dayDataTwo;
+//     let dayDataThree;
+//     let dayOneTemperature;
+//     let dayTwoTemperature;
+//     let dayThreeTemperature;
+
+
+
+//     // Morning
+//     function setMorning(){
+//         // Data Morning
+//              dayDataOne = (day[0].startTime).slice(0, 10);
+//              dayDataTwo = (day[24].startTime).slice(0, 10);
+//              dayDataThree = (day[48].startTime).slice(0, 10);
+//         // Temperature Morning
+//              dayOneTemperature = day[0].values.temperature;
+//              dayTwoTemperature = day[24].values.temperature;
+//              dayThreeTemperature= day[48].values.temperature;
+    
+//             setOnTheWindow();
+//             // document.querySelector('.data-one').append(dayDataOne);
+//     }
+    
+//     // Dinner
+//     function setDinner(){
+//         // Data Dinner
+//              dayDataOne = (day[4].startTime).slice(0, 10);
+//              dayDataTwo = (day[28].startTime).slice(0, 10);
+//              dayDataThree = (day[52].startTime).slice(0, 10);
+//         // Temperature Dinner
+//            dayOneTemperature = day[4].values.temperature;
+//              dayTwoTemperature = day[28].values.temperature;
+//              dayThreeTemperature = day[52].values.temperature;
+    
+//             setOnTheWindow();
+//     }
+    
+//     // Evening
+//     function setEvening(){
+//         // Data Evening
+//              dayDataOne = (day[10].startTime).slice(0, 10);
+//              dayDataTwo = (day[34].startTime).slice(0, 10);
+//              dayDataThree = (day[58].startTime).slice(0, 10);
+//         // Temperature Evening
+//              dayOneTemperature = day[10].values.temperature;
+//              dayTwoTemperature = day[34].values.temperature;
+//              dayThreeTemperature = day[58].values.temperature;
+    
+//             setOnTheWindow();
+//     }
+
+//     function setOnTheWindow(){
+//         document.querySelector('.data-one').append(dayDataOne);
+//         document.querySelector('.degree-one').append(String(dayOneTemperature + 15).slice(1) + ' ℃');
+
+//         document.querySelector('.data-two').append(dayDataTwo);
+//         document.querySelector('.degree-two').append(String(dayTwoTemperature + 15).slice(1) + ' ℃');
+
+//         document.querySelector('.data-three').append(dayDataThree);
+//         document.querySelector('.degree-three').append(String(dayThreeTemperature + 15).slice(1) + ' ℃');
+//     }
+
+//     if(now <= 13 && now >= 0){
+//         setMorning();
+//     } else if(now >= 14  && now <= 19){
+//         setDinner();
+//     } else if(now >= 20 && now <= 24){
+//         setEvening();
+//     }
+//     console.log(String(dayOneTemperature).slice(1))
+// }
+
+
+
+// console.log(parseFloat(-48.21 )+ ' ℃')
+
+
+// function amIWilson(p) {
+//     // check if prime is Wilson
+//     // return p == 5 ||p ==  13 || p == 563? true: false;
+
+//     return (factoriarl(p - 1) + 1) / (p * p) % 1 === 0; 
+//     function factoriarl(p){
+//         return p <= 1? 1: p * factoriarl(p - 1);
+//     }
+//   }
+
+// console.log(amIWilson(5));
+// console.log(amIWilson(9));
+// console.log(amIWilson(6));
+// document.querySelector('#from').addEventListener('input' , poisk )
+// document.querySelector('#to').addEventListener('input' , poisk )
+
+// function poisk(){
+//     let from = document.querySelector('#from').value;
+//     let to = document.querySelector('#to').value;
+
+//     console.log(from + to)
+// }
+
+
+// const div = document.getElementById('root');
+// const inputs = document.querySelectorAll('input');
+// const from = document.querySelector('#from');
+// const to = document.querySelector('#to');
+
+// let data = [ {
+//     name: 'Andy',
+//     age: 13
+// }, {
+//     name: 'Jack',
+//     age: 14
+// }, {
+//     name: 'Lucy',
+//     age: 12
+// } ]
+// // В реальном проекте нам нужно отфильтровать данные в соответствии с условиями в поле фильтра. Ниже приведен метод фильтра:
+// // @ условие фильтра условия
+// // @ param data Данные для фильтрации
+// let filter=(condition,data)=>{
+// return data.filter( item => {
+//     return Object.keys( condition ).every( key => {
+//        return String( item[ key ] ).toLowerCase().includes( 
+//                String( condition[ key ] ).trim().toLowerCase() )
+//         } );
+//  } );
+// };
+
+
+// inputs.forEach((input) => {
+//     input.addEventListener('change', () => {
+//         div.innerHTML = '';
+//         filter({name: from.ariaValueMax, age: to.value}, data).map(
+//             item => {
+//                 const component = document.createElement('div');
+//                 component.innerHTML = `
+//                     <div>
+//                         <p>Name: ${item.name}</p>
+//                         <p>Name: ${item.age}</p>
+//                     </div>
+//                 `;
+//             }
+//         );
+//     });
+// });
+// function colourAssociation(array){
+//  let arr = [];
+
+//  array.reduce((obj, element) => {
+//   obj = {};
+//   obj[element[0]] = element[1];
+//   arr.push(obj);
+//  }, {});
+//  return arr;
+// }
+// console.log(colourAssociation([["white", "goodness"], ["blue", "tranquility"]]));
+
+// function howMuchILoveYou(nbPetals) {
+//     // your code
+//   const arr = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
+//     for( let i = 1; i <= nbPetals; i++){
+//         if(i == nbPetals - 1) {
+//             return arr[i % 6];
+//         }
+//     }
+// }
+
+// console.log(howMuchILoveYou(7))
+// console.log(howMuchILoveYou(3))
+// console.log(howMuchILoveYou(6))
+
+// function SubtractSum(n){
+    
+//     let obj = {
+//         1: 'kiwi',
+//         2: 'pear',
+//         3: 'kiwi',
+//         4: 'banana',
+//         5: 'melon',
+//         6: 'banana',
+//         7: 'melon',
+//         8: 'pineapple',
+//         9: 'apple',
+//         10: 'pineapple',
+//         11:'cucumber',
+//         12:'pineapple',
+//         13:'cucumber',
+//         14:'orange',
+//         15:'grape',
+//         16:'orange',
+//         17:'grape',
+//         18:'apple',
+//         19:'grape',
+//         20:'cherry',
+//         21:'pear',
+//         22:'cherry',
+//         23:'pear',
+//         24:'kiwi',
+//         25:'banana',
+//         26:'kiwi',
+//         27:'apple',
+//         28:'melon',
+//         29:'banana',
+//         30:'melon',
+//         31:'pineapple',
+//         32:'melon',
+//         33:'pineapple',
+//         34:'cucumber',
+//         35:'orange',
+//         36:'apple',
+//         37:'orange',
+//         38:'grape',
+//         39:'orange',
+//         40:'grape',
+//         41:'cherry',
+//         42:'pear',
+//         43:'cherry',
+//         44:'pear',
+//         45:'apple',
+//         46:'pear',
+//         47:'kiwi',
+//         48:'banana',
+//         49:'kiwi',
+//         50:'banana',
+//         51:'melon',
+//         52:'pineapple',
+//         53:'melon',
+//         54:'apple',
+//         55:'cucumber',
+//         56:'pineapple',
+//         57:'cucumber',
+//         58:'orange',
+//         59:'cucumber',
+//         60:'orange',
+//         61:'grape',
+//         62:'cherry',
+//         63:'apple',
+//         64:'cherry',
+//         65:'pear',
+//         66:'cherry',
+//         67:'pear',
+//         68:'kiwi',
+//         69:'pear',
+//         70:'kiwi',
+//         71:'banana',
+//         72:'apple',
+//         73:'banana',
+//         74:'melon',
+//         75:'pineapple',
+//         76:'melon',
+//         77:'pineapple',
+//         78:'cucumber',
+//         79:'pineapple',
+//         80:'cucumber',
+//         81:'apple',
+//         82:'grape',
+//         83:'orange',
+//         84:'grape',
+//         85:'cherry',
+//         86:'grape',
+//         87:'cherry',
+//         88:'pear',
+//         89:'cherry',
+//         90:'apple',
+//         91:'kiwi',
+//         92:'banana',
+//         93:'kiwi',
+//         94:'banana',
+//         95:'melon',
+//         96:'banana',
+//         97:'melon',
+//         98:'pineapple',
+//         99:'apple',
+//         100:'pineapple',
+//     };
+
+//     let one = String(n).split('').reduce((s,i) => +s + +i);
+//     let two = n - one;
+//     for(let key in obj){
+//         if(two == key){
+//             return obj[key]
+//         } 
+//     }
+//   }
+//   console.log((SubtractSum(5)));
+
+
+// function index(array, n){
+//     //your code here
+//     if(array.length - 1 < n){
+//       return -1;
+//     } else {
+//       return array[n] ** n;
+//     }
+//   }
+
+//   console.log(index([4,5,9,4,10], 5))
+
+
+// function points(g) {
+//     let num = 0;
+//     g.map((item, i) => {
+//         if(item[0] > item[2] ){
+//             num += 3;
+//         } else if(item[0] < item[2]){
+//             num += 0;
+//         } else {
+//             num += 1;
+//         }
+
+//    });
+//    return num
+//   }
+
+
+// console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+// console.log(points(["1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"]));
+// console.log(points(['0:1','0:2','0:3','0:4','1:2','1:3','1:4','2:3','2:4','3:4']));
+
+// console.log(points(["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]));
+
+
+// function pickIt(arr){
+//     var odd=[],even=[];
+//     //coding here
+//     // arr.map(item => item % 2 == 0? even.push(item): odd.push(item));
+    
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 == 0){
+//             even.push(arr[i]);
+//         } else {
+//             odd.push(arr[i]);
+//         }
+//     }
+//     return [odd,even];
+//   }
+
+// //   console.log(pickIt([1,2]));
+// //   console.log(pickIt([1,2,3]));
+// //   console.log(pickIt([3,2,1]));
+//   console.log(pickIt([93,4,33,60,40,97,20,30,7,77,89,82,18,91,17,96,65,7,73,73]));
+
+
+// var summation = function (num) {
+//     // Code here
+//     let a = 0;
+//     for(let i = 1; i <= num; i++){
+//       a += i;
+//     }
+//     return a;
+//   };
+
+// console.log(summation(8));
+
+// function strCount(str, letter){  
+//     //code here
+//     let re = new RegExp(letter, 'g');
+//     let check = str.match(re);
+//     return check == null? 0: check.length;
+     
+//   }
+
+// console.log(strCount('Hello', 'o'));
+// console.log(strCount('Hello', 'l'));
+// console.log(strCount('Hello', 'z'));
