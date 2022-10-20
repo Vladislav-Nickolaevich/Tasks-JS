@@ -548,3 +548,43 @@
 // console.log(strCount('Hello', 'o'));
 // console.log(strCount('Hello', 'l'));
 // console.log(strCount('Hello', 'z'));
+
+
+function unusualFive() {
+    return ['a', 'b', 'c', 'd', 'e'].length;
+  }
+
+// console.log(unusualFive( ));
+
+function multipleOfIndex(array) {
+    return array.filter((item, i) => item % i == 0);
+  }
+
+// console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+
+
+function multiTable(number) {
+    let str = '';
+    for(let i = 1; i <= 10; i++){
+        str += `${i} * ${number} = ${number * i} \n` ;
+    }
+    return str;
+  }
+
+// console.log(multiTable(3));
+
+function typeOfSum(a, b) {
+    let sum = a + b;
+    return typeof(sum);
+  }
+// console.log(typeOfSum(12, 'a'));
+
+function toBinary(n){
+    if(n == 1){
+        return 1;
+      } else{
+        return Number(n.toString(2));
+      }   
+    }
+
+// console.log(toBinary(5))
