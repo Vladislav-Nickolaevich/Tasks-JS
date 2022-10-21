@@ -588,3 +588,34 @@ function toBinary(n){
     }
 
 // console.log(toBinary(5))
+
+
+function move (position, roll) {
+  return roll * 2 + position;
+}
+
+// console.log(move(0, 4));
+// console.log(move(3, 6));
+// console.log(move(2, 5));
+
+function removeEveryOther(arr){
+  return arr.filter((item, i) => i % 2 == 0);
+}
+
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+function pillars(numPill, dist, width) {
+  if(numPill == 1){
+    return 0;
+  } else if(numPill == 2){
+    return (numPill - 1 )* dist * 100;
+  } else {
+    return (numPill - 1 )* dist * 100 + (width * (numPill - 2));
+  }
+  
+}
+
+// console.log(pillars(1, 10, 10));
+// console.log(pillars(2, 20, 25));
+// console.log(pillars(11, 15, 30));
