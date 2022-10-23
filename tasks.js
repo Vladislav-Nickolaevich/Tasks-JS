@@ -619,3 +619,35 @@ function pillars(numPill, dist, width) {
 // console.log(pillars(1, 10, 10));
 // console.log(pillars(2, 20, 25));
 // console.log(pillars(11, 15, 30));
+
+
+
+
+function sumOfDifferences(arr) {
+  if(arr.length == 0){
+    return 0;
+  } else {
+    let a = arr.concat().sort((a, b) => b - a);
+    let b = arr.sort((a, b) => b - a).reverse();
+    return a[0] - b[0];
+  }
+}
+
+// console.log(sumOfDifferences([1, 2, 10])); //9//
+// console.log(sumOfDifferences([-3, -2, -1])); //2//
+
+
+// console.log(sumOfDifferences([-2,-1,0,1,-1,0,1,1,1,-2,-1,-2,1,-2,-1,0,1,-2,-1])); //3//
+// console.log(sumOfDifferences([0,-9,-9,-7,6])); //15//
+
+
+function findAverage(array) {
+  if(array.length == 0){
+    return 0;
+  }
+  return array.reduce((c, i) => c + i, 0) / array.length;
+}
+
+// console.log(findAverage([1,1,1]));
+// console.log(findAverage([1,2,3]));
+// console.log(findAverage([1,2,3,4]));
