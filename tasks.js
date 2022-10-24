@@ -651,3 +651,30 @@ function findAverage(array) {
 // console.log(findAverage([1,1,1]));
 // console.log(findAverage([1,2,3]));
 // console.log(findAverage([1,2,3,4]));
+
+
+
+function whatday(num) { 
+  let arr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+ // return arr[(num - 1) % arr.length]; // Считает любое число
+  return num <= arr.length && num > 0? arr[num - 1]:   'Wrong, please enter a number between 1 and 7';
+}
+
+// console.log(whatday(-31));
+// console.log(whatday(1));
+// console.log(whatday(2));
+// console.log(whatday(3));
+// console.log(whatday(7));
+// console.log(whatday(20)); //saturday//
+
+
+function hasUniqueChars(str){
+  let arr =  [...str];
+  let uniq =  new Set(arr);
+  return [...uniq].length == str.length;
+}
+
+// console.log(hasUniqueChars("  nAa"));
+// console.log(hasUniqueChars("abcdef"));
+// console.log(hasUniqueChars("aA"));
+// console.log(hasUniqueChars("++-"));
