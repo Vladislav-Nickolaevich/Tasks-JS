@@ -732,3 +732,43 @@ function sumEvenNumbers(input) {
 
 
 // console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+
+
+function numberToPower(number, power){
+  // return power == 0? 1: Math.pow(number, power);
+  if(power == 0){
+    return 1;
+  } else{
+   return number * numberToPower(number, power - 1);
+  }
+}
+
+// console.log(numberToPower(3,2));
+// console.log(numberToPower(4,2));
+// console.log(numberToPower(10, 6));
+// console.log(numberToPower(2,3));
+// console.log(numberToPower(10,0));
+
+
+function first(arr, n) {
+  let arrNew = [];
+    if(n == 0){
+      return [];
+    } else if(n == null){
+      return [arr[0]];
+    } else if(n > arr.length){
+      return arr;
+    } else {
+      for(let i = 0; i < n; i++){
+        arrNew.push(arr[i]);
+      }
+    }
+    return arrNew;
+}
+
+// const a = ['a', 'b', 'c', 'd', 'e'];
+// console.log(first(a, 10));
+// console.log(first(a));
+// console.log(first(a, 3));
+// console.log(first(a, 0));
