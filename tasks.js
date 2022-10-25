@@ -678,3 +678,57 @@ function hasUniqueChars(str){
 // console.log(hasUniqueChars("abcdef"));
 // console.log(hasUniqueChars("aA"));
 // console.log(hasUniqueChars("++-"));
+
+
+
+
+function XO(str) {
+  let lower = str.toLowerCase();
+  let regO = /o/gi;
+  let regX = /x/gi;
+  let checkO = lower.match(regO);
+  let checkX = lower.match(regX);
+    if(regO.test(lower) && regX.test(lower)){
+      if(checkO.length == checkX.length){
+          return true;
+        } else if(checkO.length != checkX.length){
+          return false;
+        }
+    } else  if(regX.test(lower) || regO.test(lower)){
+      return false;
+    }  else {
+      return true;
+    }
+}
+
+// console.log(XO('xoXOXOXOX'));
+// console.log(XO('xoXOXOXO'));
+// console.log(XO('az'));
+// console.log(XO('axz'));
+
+
+
+function _if(bool, func1, func2) {
+
+  if(bool == true){
+    func1();
+  } else{
+    func2();
+  }
+}
+
+
+
+function sumEvenNumbers(input) {
+  let num = 0;
+  // input.map(item => {
+  //   if(item % 2 == 0){
+  //     num += item;
+  //   }
+  // });
+  input.map(item => item % 2 == 0? num += item: 0);
+  return num;
+}
+
+
+// console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
