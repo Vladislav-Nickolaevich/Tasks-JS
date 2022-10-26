@@ -772,3 +772,22 @@ function first(arr, n) {
 // console.log(first(a));
 // console.log(first(a, 3));
 // console.log(first(a, 0));
+
+
+function doubleInteger(i) {
+  return i * 2;
+}
+
+
+
+function isItANum(str) {
+    if(str.match(/\d/gi)[0] != 0){
+      return "Not a phone number";
+    }
+    return str.match(/\d/gi).length == 11?   str.match(/\d/gi).join(''): "Not a phone number";
+  }
+
+// console.log(isItANum("S:)0207ERGQREG88349F82!efRF)"));
+// console.log(isItANum("sjfniebienvr12312312312ehfWh"));
+// console.log(isItANum("0192387415456"));
+// console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"));
