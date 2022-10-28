@@ -806,3 +806,45 @@ function dutyFree(normPrice, discount, hol){
 // console.log(dutyFree(12, 50, 1000));
 // console.log(dutyFree(17, 10, 500));
 // console.log(dutyFree(24, 35, 3000));
+
+
+function squareDigits(num){
+  return num == 0? 0:
+    Math.round(String(num)
+    .split('')
+    .map(item => item * item)
+    .join(''));
+}
+
+// console.log(squareDigits(9119));
+// console.log(squareDigits(3212));
+// console.log(squareDigits(2112));
+
+function updateLight(current) {
+
+  if(current == "green"){
+    return "yellow";
+  } else if(current == "yellow"){
+    return "red";
+  } else if(current == 'red') {
+    return "green";
+  }
+}
+
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  if(sonYearsOld == 0){
+    return dadYearsOld;
+  } else if(dadYearsOld / sonYearsOld == 2){
+    return 0;
+  } else if(dadYearsOld / sonYearsOld < 2){
+    return -(dadYearsOld - sonYearsOld - sonYearsOld);
+  } else {
+    return dadYearsOld - (sonYearsOld * 2);
+  }
+}
+
+// console.log(twiceAsOld(36,7));
+// console.log(twiceAsOld(55,30));
+// console.log(twiceAsOld(42,21));
+// console.log(twiceAsOld(29,0));
