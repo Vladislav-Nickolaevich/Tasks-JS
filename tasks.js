@@ -791,3 +791,18 @@ function isItANum(str) {
 // console.log(isItANum("sjfniebienvr12312312312ehfWh"));
 // console.log(isItANum("0192387415456"));
 // console.log(isItANum("v   uf  f 0tt2eg qe0b 8rtyq4eyq564()(((((165"));
+
+function toNumberArray(stringarray){
+  return stringarray.map(item => Number(item));
+}
+
+// console.log(toNumberArray(["1.1","2.2","3.3"]));
+
+
+function dutyFree(normPrice, discount, hol){
+    return Math.floor(hol /  (normPrice * discount / 100));
+}
+
+// console.log(dutyFree(12, 50, 1000));
+// console.log(dutyFree(17, 10, 500));
+// console.log(dutyFree(24, 35, 3000));
