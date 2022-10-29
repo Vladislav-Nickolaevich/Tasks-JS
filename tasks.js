@@ -848,3 +848,29 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 // console.log(twiceAsOld(55,30));
 // console.log(twiceAsOld(42,21));
 // console.log(twiceAsOld(29,0));
+
+
+function generateShape(integer){
+  let str = '';
+  for(let i = 0; i < integer; i++){
+      str += '+' ;
+      for(let k = 0; k < integer - 1; k++){
+        str += '+' ;
+     }
+     str += '\n';
+  }
+  return str.slice(0, -1) ;
+}
+
+// console.log(generateShape(8));
+// console.log(generateShape(3));
+
+function descendingOrder(n){
+  return +(String(n).split('').sort((a,b) => b - a).join(''));
+}
+
+// console.log(descendingOrder(0));
+// console.log(descendingOrder(1));
+// console.log(descendingOrder(111));
+// console.log(descendingOrder(1021));
+// console.log(descendingOrder(123456789));\n
