@@ -874,3 +874,58 @@ function descendingOrder(n){
 // console.log(descendingOrder(111));
 // console.log(descendingOrder(1021));
 // console.log(descendingOrder(123456789));\n
+
+
+
+
+
+function basicOp(operation, value1, value2)
+{
+    if(operation == '+'){
+      return value1 + value2;
+    } else if(operation == '-'){
+      return value1 - value2;
+    } else if(operation == '/'){
+      return value1 / value2;
+    }else {
+      return value1 * value2;
+    }
+
+}
+
+// console.log(basicOp('+', 4, 7));
+// console.log(basicOp('-', 15, 18));
+// console.log(basicOp('/', 49, 7));
+
+
+function shortcut (string) {
+  return string.replace(/[aeiou]/g, '');
+}
+
+// console.log(shortcut('haello'));
+
+function check(a,x){
+  return a.includes(x);
+}
+
+// console.log(check([66, 101], 66));
+
+
+function vaporcode(string) {
+  return string.toUpperCase().match(/[A-Z]/g).join('  ');
+}
+
+// console.log(vaporcode("Lets go to the movies"));
+// console.log(vaporcode("Why isnt my code working"));
+
+function modifyMultiply (str,loc,num) {
+  let newString = '';
+  let word =  str.split(' ')[loc];
+  for(let i = 0; i < num; i++){
+      num == 1? newString = word: newString += `${word}-`;
+  }
+  return newString.includes('-')? newString.slice(0, -1): newString;
+} 
+
+// console.log(modifyMultiply("This is a string",3 ,5));
+// console.log(modifyMultiply("This is a string",2 ,1));\n
