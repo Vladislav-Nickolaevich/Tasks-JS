@@ -1021,3 +1021,26 @@ function convertToCelsius (tempertur) {
 // console.log(weatherInfo(50));
 // console.log(weatherInfo(56));
 // console.log(convertToCelsius(56));
+
+
+
+function isIsogram(str){
+  return [...new Set(str.toLowerCase())]
+  .join('')
+  .length < str.length? false: true; 
+}
+
+// console.log( isIsogram("Dermatoglyphics"));
+// console.log( isIsogram("isogram"));
+// console.log( isIsogram("moOse"));
+
+
+function inAscOrder(arr) {
+  let a = Object.values(arr).join('');
+  let b = arr.sort((a,b) => a - b ).join('');
+  return a == b;
+
+}
+
+// console.log(inAscOrder([1, 6, 10, 18, 2, 4, 20]));
+// console.log(inAscOrder([1, 2, 4, 7, 19]));
