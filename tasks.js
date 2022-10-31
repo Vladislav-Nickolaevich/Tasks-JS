@@ -929,3 +929,95 @@ function modifyMultiply (str,loc,num) {
 
 // console.log(modifyMultiply("This is a string",3 ,5));
 // console.log(modifyMultiply("This is a string",2 ,1));\n
+
+
+
+
+
+
+let v1 = 50,
+v2 = 100,
+v3 = 150,
+v4 = 200,
+v5 = 2,
+v6 = 250;
+
+function equal1(){
+let a = v1,   
+  b = v1;   
+return a + b;
+}
+
+function equal2(){
+let a =  v3, //set number value to a
+  b =  v1; //set number value to b
+return a - b;
+}
+
+function equal3(){
+let a =  v1, //set number value to a
+  b =  v5; //set number value to b
+return a * b;
+}
+
+function equal4(){
+let a =  v4, //set number value to a
+  b =  v5; //set number value to b
+return a / b;
+}
+
+function equal5(){
+let a =  v2 , //set number value to a
+  b =  v6; //set number value to b
+return a % b;
+
+}
+// console.log(equal1());
+// console.log(equal2());
+// console.log(equal3());
+// console.log(equal4());
+// console.log(equal5());
+
+
+
+function flyBy(lamps, drone){
+  let letterX =  lamps.length - drone.length ;
+  let str = '';
+
+  if(drone.length > lamps.length){
+    for(let i = 0; i < lamps.length; i++){
+      str += 'o';
+    }
+  } else {
+    for(let i = 0; i < drone.length; i++){
+      str += 'o';
+    }
+    for(let i = 0; i < letterX; i++){
+      str += 'x';
+    }
+  }
+  return str;
+}
+// console.log(flyBy('xxxxxxxxx', '==T'));
+// console.log(flyBy('xxxxxx', '====T'));
+// console.log(flyBy('xx', '==T'));
+
+
+
+function weatherInfo (temp) {
+  var c = convertToCelsius(temp);
+  if (c < 0)
+    return (c + " is freezing temperature");
+  else
+    return (c + " is above freezing temperature");
+}
+
+function convertToCelsius (tempertur) {
+  var celsius = ((tempertur) - 32) * (5/9);
+  return celsius;
+}
+
+// console.log(weatherInfo(23));
+// console.log(weatherInfo(50));
+// console.log(weatherInfo(56));
+// console.log(convertToCelsius(56));
