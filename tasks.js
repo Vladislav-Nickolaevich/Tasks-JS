@@ -1085,4 +1085,21 @@ function vowelOne(s){
 // console.log(vowelOne("123, arou"));
 // console.log(vowelOne("abceios"));
 // console.log(vowelOne("aeiou, abc"));
-// console.log(vowelOne("y'RM5q"));
+// console.log(vowelOne("y'RM5q"));\n
+
+
+function getSumOfDigits(integer) {
+  if(integer == 0){
+    return 0;
+  }
+  return ('' + (integer)).split('').reduce((c, i) => +c + +i);
+  }
+
+// console.log(getSumOfDigits(123));
+
+
+function disemvowel(str) {
+  return str.replace(/[aeoui]/gi, '');
+}
+
+// console.log(disemvowel("This website is for losers LOL!"));\n
