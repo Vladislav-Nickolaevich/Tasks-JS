@@ -1044,3 +1044,45 @@ function inAscOrder(arr) {
 
 // console.log(inAscOrder([1, 6, 10, 18, 2, 4, 20]));
 // console.log(inAscOrder([1, 2, 4, 7, 19]));
+
+
+_=()=>('!'=='!')+('!'=='!')+('!'=='!')+('!'=='!')+('!'=='!');
+// console.log(_());
+
+
+function sortDict(dict) {
+  return isFinite(Object.entries(dict)[0][0])? Object.entries(dict).sort((a, b) => b[1] - a[1]).map((item, i) => [+item[0], item[1]]): Object.entries(dict).sort((a, b) => +b[1] - +a[1]);
+  }
+
+// console.log(sortDict({1:3,2:2,3:1}));
+// console.log(sortDict({1:5,3:10,2:2,6:3,8:8}));
+// console.log(sortDict({'a':6,'b':2,'c':4}));
+
+
+function shorter_reverse_longer(a,b){
+  if(a.length == 0){
+    return a + b.split('').reverse().join('') + a;
+  } else if (b.length == 0){
+    return b + a.split('').reverse().join('') + b;
+  }
+  return a.length == b.length || a.length > b.length? b + a.split('').reverse().join('') + b :  a + b.split('').reverse().join('') + a;
+}
+
+
+// console.log((shorter_reverse_longer("first", "abcde")));
+// console.log((shorter_reverse_longer("hello", "bau")));
+// console.log((shorter_reverse_longer("fghi", "abcde")));
+// console.log((shorter_reverse_longer("", "abcde")));
+
+
+function vowelOne(s){
+  return s.split('')
+  .map(item => item.match(/o|e|a|u|i|O|E|A|U|I/)? item.replace(/o|e|a|u|i|O|E|A|U|I/, '1'): 0)
+  .join('');
+}
+
+// console.log(vowelOne("vowelOne"));
+// console.log(vowelOne("123, arou"));
+// console.log(vowelOne("abceios"));
+// console.log(vowelOne("aeiou, abc"));
+// console.log(vowelOne("y'RM5q"));
