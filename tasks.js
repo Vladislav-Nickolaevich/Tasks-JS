@@ -1103,3 +1103,32 @@ function disemvowel(str) {
 }
 
 // console.log(disemvowel("This website is for losers LOL!"));\n
+
+
+
+
+function quadratic(x1, x2){
+  let a = 1;
+  let b = -x1 - x2;
+  let c = x1 * x2;
+  return [a, b, c];
+}
+
+// console.log(quadratic( 0,  1));
+// console.log(quadratic( 1,  1));
+// console.log(quadratic(-4, -9));
+// console.log(quadratic( -5, -4));\n
+
+
+
+
+function search(budget, prices) {
+
+  let arr = [];
+  prices.filter(item => item <= budget? arr.push(item): 0);
+  return arr.sort((a,b) => a - b).join(',');
+  
+  }
+
+// console.log(search(3, [6, 1, 2, 9, 2]));
+// console.log(search(14, [7, 3, 23, 9, 14, 20, 7]));\n
