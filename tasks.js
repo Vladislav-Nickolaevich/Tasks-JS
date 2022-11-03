@@ -1132,3 +1132,12 @@ function search(budget, prices) {
 
 // console.log(search(3, [6, 1, 2, 9, 2]));
 // console.log(search(14, [7, 3, 23, 9, 14, 20, 7]));\n
+
+function barTriang(p1, p2, p3){
+
+  let a = +((p1[0] + p2[0] + p3[0]) / 3).toFixed(4);
+  let b = +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4);
+  return [a, b];
+}
+
+// console.log(barTriang([4, 6], [12, 4], [10, 10]));\n
