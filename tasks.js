@@ -1141,3 +1141,24 @@ function barTriang(p1, p2, p3){
 }
 
 // console.log(barTriang([4, 6], [12, 4], [10, 10]));\n
+
+
+let litres = time =>  time < 2? 0: Math.floor(time / 2);
+
+// console.log(litres(2));
+
+
+function bmi(weight, height) {
+  let a = (weight / (height *height));
+  if(a <= 18.5){
+    return  "Underweight";
+  } else if(a <= 25.0){
+    return "Normal";
+  } else if(a <= 30.0){
+    return  "Overweight";
+  } else if(a > 30){
+    return "Obese";
+  }
+} 
+
+// console.log(bmi(80, 1.80));
