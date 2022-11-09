@@ -1162,3 +1162,22 @@ function bmi(weight, height) {
 } 
 
 // console.log(bmi(80, 1.80));
+
+// Return the nth triangular number
+function triangular( n ) {
+  if(n <= 0){
+    return 0;
+  }
+  if(n == 1){
+    return 1;
+  }
+  let num = 0;
+  for(let i = 1; i<= n; i++){
+    num += i;
+  }
+  return num;
+}
+
+console.log(triangular(5));
+// console.log(triangular(0));
+// console.log(triangular(-55));
