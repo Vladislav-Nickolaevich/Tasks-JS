@@ -1178,6 +1178,26 @@ function triangular( n ) {
   return num;
 }
 
-console.log(triangular(5));
+// console.log(triangular(5));
 // console.log(triangular(0));
 // console.log(triangular(-55));
+
+
+
+function spoonerize(words) {
+  let firstWord = words.split(' ')[0];
+  let firstLetterOfFirstWord = firstWord[0];
+  let secondWord = words.split(' ')[1];
+  let secondLetterOfSecondWord = secondWord[0];
+  return secondLetterOfSecondWord + firstWord.slice(1) + ' ' + firstLetterOfFirstWord + secondWord.slice(1);
+}
+
+// console.log(spoonerize("nit picking"));
+// console.log(spoonerize("wedding bells"));
+// console.log(spoonerize("jelly beans"));
+
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '');
+}
+// console.log(removeExclamationMarks("Hello World!!!!"));
