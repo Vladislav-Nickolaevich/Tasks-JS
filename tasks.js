@@ -1201,3 +1201,29 @@ function removeExclamationMarks(s) {
   return s.replace(/!/g, '');
 }
 // console.log(removeExclamationMarks("Hello World!!!!"));
+
+
+var isAnagram = function(test, original) {
+  return test.toLowerCase().split('').sort().join('') == original.toLowerCase().split('').sort().join('');
+};
+
+// console.log(isAnagram("foefet", "toffee"));
+// console.log(isAnagram("Buckethead", "DeathCubeK"));
+// console.log(isAnagram("dumble", "bumble"));
+
+
+function isLeapYear(year) {
+  if(Number.isInteger(year / 400)){
+    return true;
+  }
+  if(Number.isInteger(year / 100)){
+    return false;
+  }
+
+  return Number.isInteger(+year / 4)? true: false;
+}
+// console.log(isLeapYear(1234));
+// console.log(isLeapYear(1984));
+// console.log(isLeapYear(2000));
+// console.log(isLeapYear(2010));
+// console.log(isLeapYear(2013));
