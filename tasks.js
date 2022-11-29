@@ -1227,3 +1227,19 @@ function isLeapYear(year) {
 // console.log(isLeapYear(2000));
 // console.log(isLeapYear(2010));
 // console.log(isLeapYear(2013));
+
+
+function filter_list(l) {
+  return l.filter(item => Number.isInteger(item));
+}
+// console.log(filter_list([1,2,'a','b']));
+// console.log(filter_list([1,'a','b',0,15]));
+// console.log(filter_list([1,2,'aasf','1','123',123]));
+
+function solution(nums){
+  return nums == null || nums.length == 0? []: nums.sort((a,b) => a - b);
+
+}
+// console.log(solution([1,2,3,10,5]));
+// console.log(solution(null));
+// console.log(solution([2, 20, 10]));
