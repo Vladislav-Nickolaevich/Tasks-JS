@@ -1243,3 +1243,20 @@ function solution(nums){
 // console.log(solution([1,2,3,10,5]));
 // console.log(solution(null));
 // console.log(solution([2, 20, 10]));
+
+
+
+function gooseFilter (birds) {
+  Array.prototype.diff = function(a) {
+    return this.filter(function(i){return a.indexOf(i) < 0;});
+};
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+ return birds.diff(geese)
+}
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+
+function sumStr(a,b) {
+  return String(+a + +b);
+}
+
+console.log(sumStr("4","5"));
