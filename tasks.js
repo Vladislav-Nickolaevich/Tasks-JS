@@ -1046,7 +1046,7 @@ function inAscOrder(arr) {
 // console.log(inAscOrder([1, 2, 4, 7, 19]));
 
 
-_=()=>('!'=='!')+('!'=='!')+('!'=='!')+('!'=='!')+('!'=='!');
+// _=()=>('!'=='!')+('!'=='!')+('!'=='!')+('!'=='!')+('!'=='!');
 // console.log(_());
 
 
@@ -1259,4 +1259,21 @@ function sumStr(a,b) {
   return String(+a + +b);
 }
 
-console.log(sumStr("4","5"));
+// console.log(sumStr("4","5"));
+
+
+function isInStrictMode() {
+	return this === undefined;
+}
+// console.log(isInStrictMode());
+
+function DNAStrand(dna){
+  return dna.split('').map(el => el == 'A'? el = "T":
+  el == 'T'? el = 'A':
+  el == 'C'? el = 'G':
+  el == 'G'? el ='C'
+  : el).join('');
+}
+console.log(DNAStrand("AAAA"));
+console.log(DNAStrand("ATTGC"));
+console.log(DNAStrand("GTAT"));
