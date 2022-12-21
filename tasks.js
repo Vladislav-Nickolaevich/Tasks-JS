@@ -1298,3 +1298,8 @@ function findShort(s){
 // console.log(findShort("turns out random test cases are easier than writing out basic ones"));
 // console.log(findShort("Let's travel abroad shall we"));
 // console.log(findShort("Steem Steem BTC Classic BTC Ethereum Steem Dash ProofOfWork BTC 21inc BTC ProofOfStake"));
+
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
+console.log(otherAngle(43, 78));
