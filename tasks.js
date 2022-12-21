@@ -1274,6 +1274,27 @@ function DNAStrand(dna){
   el == 'G'? el ='C'
   : el).join('');
 }
-console.log(DNAStrand("AAAA"));
-console.log(DNAStrand("ATTGC"));
-console.log(DNAStrand("GTAT"));
+// console.log(DNAStrand("AAAA"));
+// console.log(DNAStrand("ATTGC"));
+// console.log(DNAStrand("GTAT"));
+
+
+
+
+// const names = [
+//   {name: 'Nick', age: 21, isMarried: true, scores: 14},
+//   {name: 'John', age: 14, isMarried: false, scores: 55},
+//   {name: 'Mick', age: 41, isMarried: true, scores: 53},
+//   {name: 'Alex', age: 22, isMarried: true, scores: 23},
+//   {name: 'blex', age: 22, isMarried: true, scores: 23},
+// ];
+
+// console.log(names.sort((a,b) => a.name.localeCompare(b.name)));
+
+function findShort(s){
+  return s.split(' ').map(item => item.length).sort((a,b) => a - b)[0];
+}
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+// console.log(findShort("turns out random test cases are easier than writing out basic ones"));
+// console.log(findShort("Let's travel abroad shall we"));
+// console.log(findShort("Steem Steem BTC Classic BTC Ethereum Steem Dash ProofOfWork BTC 21inc BTC ProofOfStake"));
