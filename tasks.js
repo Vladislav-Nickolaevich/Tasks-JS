@@ -1336,3 +1336,13 @@ const repeatString = (str, num, sign) => {
 // console.log(repeatString('yo', 3, ' '));
 // console.log(repeatString('yo', 3, ','));
 
+const checkStart = (str,checkStr) => {
+    let strLength = checkStr.length;
+    return str.toLowerCase().slice(0, strLength) === checkStr;
+};
+
+// console.log(checkStart("Incubator", "inc"));
+// console.log(checkStart("Incubator", "yo"));
+
+
+
