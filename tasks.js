@@ -1332,7 +1332,6 @@ const repeatString = (str, num, sign) => {
     }
     return result.slice(0, -1);
 };
-
 // console.log(repeatString('yo', 3, ' '));
 // console.log(repeatString('yo', 3, ','));
 
@@ -1384,3 +1383,13 @@ const isIncludes = (str, inc) => {
   
   
 
+
+
+  function highAndLow(numbers){
+    let max = [...numbers].join('').split(' ').sort((a, b) => b - a)[0];
+    let min = [...numbers].join('').split(' ').sort((a, b) => a - b)[0];
+
+    return  max + ' '  + min;
+  }
+
+  // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
