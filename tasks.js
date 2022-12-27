@@ -1353,3 +1353,14 @@ const truncateString = (str,num) => {
 
 // console.log(truncateString("Всем студентам инкубатора желаю удачи!", 10));
 
+
+
+const setUpperCase = (str) => {
+  return str.toLowerCase()
+  .split(' ')
+  .map(el => el[0].toUpperCase() + el.slice(1))
+  .join(' ');
+};
+// console.log(setUpperCase("всем стУдентам инкуБатора Желаю удачИ!"));
+
+
