@@ -1312,3 +1312,14 @@ function geo_mean(nums, arith_mean) {
 function grow(x){
   return x.reduce((a,i) => a * i);
 }
+
+
+function numberJoy(n) {
+    const sum =  String(n).split('').reduce((a,i) => +a + +i);
+    const sumMirror = String(sum).split('').reverse().join('');
+    return sum * sumMirror === n;
+}
+// console.log(numberJoy(1997));
+// console.log(numberJoy(1998));
+// console.log(numberJoy(81));
+// console.log(numberJoy(1729));
