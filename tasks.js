@@ -1302,4 +1302,13 @@ function findShort(s){
 function otherAngle(a, b) {
   return 180 - a - b;
 }
-console.log(otherAngle(43, 78));
+// console.log(otherAngle(43, 78));
+
+
+function geo_mean(nums, arith_mean) {
+  return nums.reduce((a,i) => a + i, 0) / arith_mean/ arith_mean;
+}
+
+function grow(x){
+  return x.reduce((a,i) => a * i);
+}
