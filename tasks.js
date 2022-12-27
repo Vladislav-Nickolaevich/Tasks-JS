@@ -1323,3 +1323,16 @@ function numberJoy(n) {
 // console.log(numberJoy(1998));
 // console.log(numberJoy(81));
 // console.log(numberJoy(1729));
+
+
+const repeatString = (str, num, sign) => {
+  let result = '';
+    for(let i = 0; i < num; i++){
+      result += str + sign;
+    }
+    return result.slice(0, -1);
+};
+
+// console.log(repeatString('yo', 3, ' '));
+// console.log(repeatString('yo', 3, ','));
+
