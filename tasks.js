@@ -1346,3 +1346,10 @@ const checkStart = (str,checkStr) => {
 
 
 
+const truncateString = (str,num) => {
+  return str.substr(0, num) + '...';
+  
+};
+
+// console.log(truncateString("Всем студентам инкубатора желаю удачи!", 10));
+
