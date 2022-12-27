@@ -1363,4 +1363,24 @@ const setUpperCase = (str) => {
 };
 // console.log(setUpperCase("всем стУдентам инкуБатора Желаю удачИ!"));
 
+const isIncludes = (str, inc) => {
+  let newInc = ([...new Set(inc.toLowerCase())]).join('');
+  let a ='';
+  for(let i = 0; i < str.length; i++){
+     for(let k = 0; k < newInc.length; k++){
+      if(str.toLowerCase()[i].includes(newInc[k])){
+        a += str[i];
+      }
+     }
+  }
+   return a.length == newInc.length;
+  };
+  
+  // console.log(isIncludes("Incubator", "Cut"));
+  // console.log(isIncludes("Incubator", "table"));
+  // console.log(isIncludes("Incubator", "inbba"));
+  // console.log(isIncludes("Incubator", "inba"));
+  // console.log(isIncludes("Incubator", "Incubatorrr"));
+  
+  
 
