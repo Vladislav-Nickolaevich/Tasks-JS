@@ -1403,3 +1403,8 @@ const isIncludes = (str, inc) => {
 }
 // console.log(past(1,1,1));
 // console.log(past(0,1,1));
+
+function addLength(str) {
+  return str.split(' ').map(el => `${el} ${el.length}`);
+}
+// console.log(addLength('apple ban'));  
