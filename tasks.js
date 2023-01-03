@@ -1393,3 +1393,13 @@ const isIncludes = (str, inc) => {
   }
 
   // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+
+  function past(h, m, s){
+    let minutes = h * 60;
+    let seconds = (minutes + m) * 60;
+    let mlSeconds = (seconds + s) * 1000;
+  return  mlSeconds;
+}
+// console.log(past(1,1,1));
+// console.log(past(0,1,1));
