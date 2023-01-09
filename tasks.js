@@ -1411,13 +1411,13 @@ function addLength(str) {
 
 
 function countConsonants(str) {
-  return new Set(str.split('').map(el => el.toLowerCase().replace(/[a | e | i | o | u | ! ]/g, '').replace(/[0-9]/, '')).join('')).size;
+  return new Set(str.toLowerCase().replace(/[a | e | i | o | u | ! ]/g, '').replace(/[0-9]/, '')).size;
 }
-// console.log(countConsonants("add"));
-// console.log(countConsonants("Dad"));
-// console.log(countConsonants("aeiou"));
-// console.log(countConsonants("sillystring"));
-// console.log(countConsonants("abcdefghijklmnopqrstuvwxyz"));
+console.log(countConsonants("add"));
+console.log(countConsonants("Dad"));
+console.log(countConsonants("aeiou"));
+console.log(countConsonants("sillystring"));
+console.log(countConsonants("abcdefghijklmnopqrstuvwxyz"));
 // console.log(countConsonants("Count my unique consonants!!"));
 // console.log(countConsonants("2"));
 
