@@ -1408,3 +1408,17 @@ function addLength(str) {
   return str.split(' ').map(el => `${el} ${el.length}`);
 }
 // console.log(addLength('apple ban'));  
+
+
+function countConsonants(str) {
+  return new Set(str.split('').map(el => el.toLowerCase().replace(/[a | e | i | o | u | ! ]/g, '').replace(/[0-9]/, '')).join('')).size;
+}
+// console.log(countConsonants("add"));
+// console.log(countConsonants("Dad"));
+// console.log(countConsonants("aeiou"));
+// console.log(countConsonants("sillystring"));
+// console.log(countConsonants("abcdefghijklmnopqrstuvwxyz"));
+// console.log(countConsonants("Count my unique consonants!!"));
+// console.log(countConsonants("2"));
+
+
