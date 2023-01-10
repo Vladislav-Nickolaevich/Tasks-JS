@@ -1413,12 +1413,24 @@ function addLength(str) {
 function countConsonants(str) {
   return new Set(str.toLowerCase().replace(/[a | e | i | o | u | ! ]/g, '').replace(/[0-9]/, '')).size;
 }
-console.log(countConsonants("add"));
-console.log(countConsonants("Dad"));
-console.log(countConsonants("aeiou"));
-console.log(countConsonants("sillystring"));
-console.log(countConsonants("abcdefghijklmnopqrstuvwxyz"));
+// console.log(countConsonants("add"));
+// console.log(countConsonants("Dad"));
+// console.log(countConsonants("aeiou"));
+// console.log(countConsonants("sillystring"));
+// console.log(countConsonants("abcdefghijklmnopqrstuvwxyz"));
 // console.log(countConsonants("Count my unique consonants!!"));
 // console.log(countConsonants("2"));
 
+function consonantCount(str) {
+  // return str.split('').map(el => isFinite(+el)? '': el)
+return str.split('').map(el => isFinite(+el)? '': el).join('').replace(/[aeiou_]/gi, '').replace(/\W/gi, '').length;
+} 
+// console.log(consonantCount(''));
+// console.log(consonantCount('aaaaa'));
+// console.log(consonantCount('XaeiouX'));
+// console.log(consonantCount('Bbbbb'));
+// console.log(consonantCount('helLo world'));
+// console.log(consonantCount('h^$&^#$&^elLo world'));
+// console.log(consonantCount('0123456789'));
+// console.log(consonantCount('012345_Cb'));
 
