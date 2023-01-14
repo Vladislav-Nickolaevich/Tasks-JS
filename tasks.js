@@ -1434,3 +1434,17 @@ return str.split('').map(el => isFinite(+el)? '': el).join('').replace(/[aeiou_]
 // console.log(consonantCount('0123456789'));
 // console.log(consonantCount('012345_Cb'));
 
+const isEvenIndexSumGreater = (a, b, c) => {
+  let isTriagle = (a + b) > c && (b + c) > a && (a + c) > b ? true : false;
+
+  return a == b && b == c ? '10' :
+      (isTriagle && (a === b || b == c || a == c)) ? '01' :
+        iTriagle ? '11' :
+         '00';
+};
+// console.log(isEvenIndexSumGreater(1, 1, 1)); //10
+// console.log(isEvenIndexSumGreater(2, 3, 3));  //01
+// console.log(isEvenIndexSumGreater(3, 3, 2)); //01
+// console.log(isEvenIndexSumGreater(4, 5, 3)); //00
+// console.log(isEvenIndexSumGreater(10, 2, 2)); //01
+
