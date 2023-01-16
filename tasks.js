@@ -1448,3 +1448,15 @@ const isEvenIndexSumGreater = (a, b, c) => {
 // console.log(isEvenIndexSumGreater(4, 5, 3)); //00
 // console.log(isEvenIndexSumGreater(10, 2, 2)); //01
 
+
+function minMinMax(array) {
+let min = +[...array].sort((a, b) => a - b).splice(0,1);
+let max = +[...array].sort((a, b) => b - a).splice(0,1);
+let num = [];
+for(let i = min+ 1; i <max; i++){
+ num.push(i);
+}
+let middle =  +num.filter(el => ![...array].includes(el)).splice(0, 1);
+  return [min, middle, max];
+}
+// console.log(minMinMax([1, 3, -3, -2, 8, -1]));
