@@ -1460,3 +1460,13 @@ let middle =  +num.filter(el => ![...array].includes(el)).splice(0, 1);
   return [min, middle, max];
 }
 // console.log(minMinMax([1, 3, -3, -2, 8, -1]));
+
+
+const solutionTask = (str, ending) => ending.length === 0? true:str.substr(-ending.length)=== ending;
+// console.log(solutionTask('abcde', 'cde'));
+// console.log(solutionTask('abcde', 'abc'));
+// console.log(solutionTask('abc', ''));
+
+
+
+
