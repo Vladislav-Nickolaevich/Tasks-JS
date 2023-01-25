@@ -1468,5 +1468,11 @@ const solutionTask = (str, ending) => ending.length === 0? true:str.substr(-endi
 // console.log(solutionTask('abc', ''));
 
 
+function trim(str, size) {
+  return str.length <= size? str: str.slice(0, (size - 3 <= 0? size: size - 3)) + '...';
+}
 
-
+// console.log(trim("Creating kata is fun", 14)); //"Creating ka..."
+// console.log(trim("He", 1)); //"H..."
+// console.log(trim("Code Wars is pretty rad", 50));  //"Code Wars is pretty rad"
+// console.log(trim("ucu",4)); // ucu
