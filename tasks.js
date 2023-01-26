@@ -1476,3 +1476,17 @@ function trim(str, size) {
 // console.log(trim("He", 1)); //"H..."
 // console.log(trim("Code Wars is pretty rad", 50));  //"Code Wars is pretty rad"
 // console.log(trim("ucu",4)); // ucu
+
+
+
+function createArray(number){
+  var newArray = [];
+  
+  for(var counter = 1; counter <= number; counter++){
+    newArray.push(counter);
+  }
+  
+  return newArray;
+}
+
+// console.log(createArray(3));
