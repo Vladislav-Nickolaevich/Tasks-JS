@@ -1490,3 +1490,18 @@ function createArray(number){
 }
 
 // console.log(createArray(3));
+
+
+function covfefe(str){
+  return (
+      str === 'covfefe' || !str.includes('coverage')? 
+      str + ' covfefe':
+      str.replace(/coverage/gi, 'covfefe')
+      );
+}
+// console.log(covfefe("coverage"));
+// console.log(covfefe("coverage coverage"));
+// console.log(covfefe("nothing"));
+// console.log(covfefe("double space "));
+// console.log(covfefe("covfefe"));
+// console.log(covfefe("usfb9coveragesuixd tg35i w9h1rcoverage j12xf fqi8i"));
