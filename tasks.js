@@ -1505,3 +1505,9 @@ function covfefe(str){
 // console.log(covfefe("double space "));
 // console.log(covfefe("covfefe"));
 // console.log(covfefe("usfb9coveragesuixd tg35i w9h1rcoverage j12xf fqi8i"));
+
+function convertHashToArray(hash){
+  return Object.entries(hash).sort((a, b) => a > b? 1: -1);
+}
+
+console.log(convertHashToArray({name: "Jeremy", age: 24, role: "Software Engineer"}));
