@@ -1510,4 +1510,9 @@ function convertHashToArray(hash){
   return Object.entries(hash).sort((a, b) => a > b? 1: -1);
 }
 
-console.log(convertHashToArray({name: "Jeremy", age: 24, role: "Software Engineer"}));
+// console.log(convertHashToArray({name: "Jeremy", age: 24, role: "Software Engineer"}));
+
+function isDivisible(n, x, y) {
+  return Number.isInteger(n / x) && Number.isInteger(n / y);
+}
+// console.log(isDivisible(3,3,4));
