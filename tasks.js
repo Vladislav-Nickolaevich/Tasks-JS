@@ -1516,3 +1516,9 @@ function isDivisible(n, x, y) {
   return Number.isInteger(n / x) && Number.isInteger(n / y);
 }
 // console.log(isDivisible(3,3,4));
+
+
+function smash (words) {
+  return words.join(' ');
+}
+// console.log(smash(['hello', 'world', 'this', 'is', 'great']));
