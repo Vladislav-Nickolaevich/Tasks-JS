@@ -1529,3 +1529,8 @@ function sumOfMinimums(arr) {
 }
 
 // console.log(sumOfMinimums( [[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
+
+function sumTwoSmallestNumbers(numbers) {  
+  return numbers.sort((a, b) => a - b).slice(0, 2).reduce((a, b) => a + b); 
+}
+// console.log(sumTwoSmallestNumbers( [5, 8, 12, 19, 22]));
