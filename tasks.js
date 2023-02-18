@@ -1534,3 +1534,12 @@ function sumTwoSmallestNumbers(numbers) {
   return numbers.sort((a, b) => a - b).slice(0, 2).reduce((a, b) => a + b); 
 }
 // console.log(sumTwoSmallestNumbers( [5, 8, 12, 19, 22]));
+
+
+var cubeChecker = function(volume, side){
+ return !Number.isInteger(volume) || side <= 0 || volume !== side * side * side? false: true;
+};
+// console.log(cubeChecker(56.3, 1));
+// console.log(cubeChecker(-1, 2));
+// console.log(cubeChecker(8, 3));
+// console.log(cubeChecker(8, 2));
