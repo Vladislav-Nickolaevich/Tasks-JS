@@ -1543,3 +1543,13 @@ var cubeChecker = function(volume, side){
 // console.log(cubeChecker(-1, 2));
 // console.log(cubeChecker(8, 3));
 // console.log(cubeChecker(8, 2));
+
+
+function solution(string) {
+    return string.length == 0? '': 
+                            string.split('')
+                            .map(el => el == el.toUpperCase()? ' ' + el: el )
+                            .join('');
+}
+
+// console.log(solution('camelCasing'));
