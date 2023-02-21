@@ -1574,10 +1574,26 @@ function likes(names) {
 // console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
 
 function hero(bullets, dragons){
-  //Get Coding!
     return  (bullets / dragons) >= 2;
-  }
+}
   
 
+function noIfsNoButs(a, b) {
+  let firstValue = (a - b + '')[0];
+  switch(firstValue){
+    case `-`:
+      return `${a} is smaller than ${b}`
+    break;
+    case '0':
+      return `${a} is equal to ${b}`
+    break;
+    default:
+      return `${a} is greater than ${b}`
+  }
+}
+
+// console.log(noIfsNoButs(45, 51));
+// console.log(noIfsNoButs(1, 1));
+// console.log(noIfsNoButs(100, 80));
 
 
