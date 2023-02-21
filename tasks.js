@@ -1572,3 +1572,12 @@ function likes(names) {
 // console.log(likes(['Jacob', 'Alex']));
 // console.log(likes(['Max', 'John', 'Mark']));
 // console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
+
+function hero(bullets, dragons){
+  //Get Coding!
+    return  (bullets / dragons) >= 2;
+  }
+  
+
+
+
