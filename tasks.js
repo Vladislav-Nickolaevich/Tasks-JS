@@ -1607,9 +1607,21 @@ let foods = {
 };
 
 function checkInventory(scannedItem) {
-  // Only change code below this line
   return foods[scannedItem];
-  // Only change code above this line
 }
 
 // console.log(checkInventory("apples"));
+
+const removeConsecutiveDuplicates = s => {
+  let arr = s.split(' ');
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== arr[i + 1]){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr.join(' ');
+};
+
+
+// console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'));
