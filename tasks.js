@@ -1625,3 +1625,20 @@ const removeConsecutiveDuplicates = s => {
 
 
 // console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'));
+
+
+
+function keepOrder(ary, val) {
+  let newAry = ary.map((el, i) => {
+    if(el < val){
+      return i;
+    }
+  });
+  return newAry.join('').length;
+}
+
+// console.log(keepOrder([1, 2, 3, 4, 7], 5));
+// console.log(keepOrder([1, 2, 3, 4, 7], 0));
+// console.log(keepOrder([1, 1, 2, 2, 2], 2));
+// console.log(keepOrder([1, 2, 3, 4], 5));
+// console.log(keepOrder([1, 2, 3, 4], -1));
