@@ -1642,3 +1642,16 @@ function keepOrder(ary, val) {
 // console.log(keepOrder([1, 1, 2, 2, 2], 2));
 // console.log(keepOrder([1, 2, 3, 4], 5));
 // console.log(keepOrder([1, 2, 3, 4], -1));
+
+
+
+function bandNameGenerator(str) {
+  return str[0] !== str.slice(-1)? 
+  'The ' + str.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join(''):
+  str.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join('') + str.slice(1);
+}
+
+// console.log(bandNameGenerator('knife'));
+// console.log(bandNameGenerator('tart'));
+// console.log(bandNameGenerator('sandles'));
+// console.log(bandNameGenerator('bed'));
