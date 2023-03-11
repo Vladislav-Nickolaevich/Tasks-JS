@@ -1655,3 +1655,18 @@ function bandNameGenerator(str) {
 // console.log(bandNameGenerator('tart'));
 // console.log(bandNameGenerator('sandles'));
 // console.log(bandNameGenerator('bed'));
+
+
+// function describeAge(age) {
+
+//   return age <= 12?  "You're a(n) kid":
+//   age >= 13 && age <= 17? "You're a(n) teenager":
+//   age >= 18 && age <= 64? "You're a(n) adult": "You're a(n) elderly"
+
+// }
+
+const describeAge = age =>  "You're a(n) " + (age <= 12? "kid":
+  age >= 13 && age <= 17? "teenager":
+  age >= 18 && age <= 64?  "adult":  "elderly");
+
+console.log(describeAge(156));
