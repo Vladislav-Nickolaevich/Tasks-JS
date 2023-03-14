@@ -1661,4 +1661,12 @@ const describeAge = age =>  "You're a(n) " + (age <= 12? "kid":
   age >= 13 && age <= 17? "teenager":
   age >= 18 && age <= 64?  "adult":  "elderly");
 
-console.log(describeAge(156));
+// console.log(describeAge(156));
+
+
+
+
+function periodIsLate(last, today, cycleLength) {
+  return ((today - last) / 24 / 60 / 60 / 1000 - cycleLength)  > 0? true: false;
+}
+// console.log(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 35));
