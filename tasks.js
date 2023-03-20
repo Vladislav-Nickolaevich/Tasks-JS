@@ -1670,3 +1670,9 @@ function periodIsLate(last, today, cycleLength) {
   return ((today - last) / 24 / 60 / 60 / 1000 - cycleLength)  > 0? true: false;
 }
 // console.log(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 35));
+
+
+function ifChuckSaysSo(){
+  return 0 > 1;
+}
+
