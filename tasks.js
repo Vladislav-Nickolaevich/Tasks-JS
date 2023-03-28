@@ -1679,3 +1679,21 @@ function ifChuckSaysSo(){
 function joinStrings(string1, string2){
   return `${string1} ${string2}`;
   }
+
+
+  function maskify(cc) {
+    if(cc.length<= 4){
+      return cc;
+    }
+    let endCC = cc.slice(-4);
+    let lengthCC = cc.length - 4;
+    let result = '';
+    for(let i = 0; i < lengthCC; i++){
+      result  += '#';
+    }
+    return result + endCC;
+  }
+
+  // console.log(maskify('4556364607935616'));
+  // console.log(maskify('1'));
+  // console.log(maskify('11111'));
