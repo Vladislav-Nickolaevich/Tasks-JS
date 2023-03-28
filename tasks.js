@@ -1697,3 +1697,21 @@ function joinStrings(string1, string2){
   // console.log(maskify('4556364607935616'));
   // console.log(maskify('1'));
   // console.log(maskify('11111'));
+
+  function computerToPhone(numbers){
+    return numbers.split('').map(el => el === '7'?
+                                       el = '1':
+                                       el === '1'?
+                                       el = '7':
+                                       el === '8'?
+                                       el = '2':
+                                       el === '2'?
+                                       el = '8':
+                                       el === '9'?
+                                       el = '3':
+                                       el === '3'?
+                                       el = '9':
+                                       el  
+    ).join('');
+  }
+  // console.log(computerToPhone("0789456123"));
