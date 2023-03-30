@@ -1715,3 +1715,11 @@ function joinStrings(string1, string2){
     ).join('');
   }
   // console.log(computerToPhone("0789456123"));
+
+
+  function initials(n){
+    return n.split(' ').map(el => el[0].toUpperCase()).join('.') + n.split(' ').slice(-1).join('').slice(1);
+  }
+
+  console.log(initials('code wars'));
+  console.log(initials('Barack Hussain obama'));
