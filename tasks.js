@@ -1721,5 +1721,12 @@ function joinStrings(string1, string2){
     return n.split(' ').map(el => el[0].toUpperCase()).join('.') + n.split(' ').slice(-1).join('').slice(1);
   }
 
-  console.log(initials('code wars'));
-  console.log(initials('Barack Hussain obama'));
+  // console.log(initials('code wars'));
+  // console.log(initials('Barack Hussain obama'));
+
+
+  function betweenExtremes(numbers) {
+    return [...numbers].sort((a, b) => b-a)[0] - [...numbers].sort((a, b) => a-b)[0];
+  }
+
+  // console.log(betweenExtremes([21, 34, 54, 43, 26, 12]));
