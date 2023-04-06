@@ -1738,3 +1738,22 @@ function joinStrings(string1, string2){
  const abbrevName = name => name.split(' ').map(el => el[0].toUpperCase()).join('.');
 
 // console.log(abbrevName("Sam Harris"));
+
+
+function consecutive(arr) {
+  let newArr = [];
+  let start= [...arr].sort((a, b) => a - b)[0];
+  let end = [...arr].sort((a, b) => b - a)[0];
+  for(let i = start + 1; i < end; i++){
+    // newArr.push(i);
+    if(!arr.includes(i)){
+      newArr.push(i);
+    }
+  }
+  return newArr.length;
+}
+
+// console.log(consecutive([4,8,6]));
+// console.log(consecutive([1,2,3,4]));
+// console.log(consecutive([]));
+// console.log(consecutive([1]));
