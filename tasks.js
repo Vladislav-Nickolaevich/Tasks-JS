@@ -1733,3 +1733,8 @@ function joinStrings(string1, string2){
 
 
   const hoopCount = n => n >= 10?  "Great, now move on to tricks": "Keep at it until you get it";
+
+
+ const abbrevName = name => name.split(' ').map(el => el[0].toUpperCase()).join('.');
+
+// console.log(abbrevName("Sam Harris"));
