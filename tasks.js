@@ -1730,3 +1730,6 @@ function joinStrings(string1, string2){
   }
 
   // console.log(betweenExtremes([21, 34, 54, 43, 26, 12]));
+
+
+  const hoopCount = n => n >= 10?  "Great, now move on to tricks": "Keep at it until you get it";
