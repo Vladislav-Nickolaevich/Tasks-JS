@@ -1757,3 +1757,9 @@ function consecutive(arr) {
 // console.log(consecutive([1,2,3,4]));
 // console.log(consecutive([]));
 // console.log(consecutive([1]));
+
+function sortByLength (array) {
+    return array.sort((a, b) => a.length > b.length? 1 : -1);
+};
+
+// console.log(sortByLength(["Beg", "Life", "I", "To"]));
