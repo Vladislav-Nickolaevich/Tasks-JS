@@ -1768,3 +1768,11 @@ function noOdds( values ){
   return values.filter(el => el % 2 === 0);
 }
 // console.log(noOdds([0,1,2,3]));
+
+
+function largest(n, array) {
+  return array.sort((a,b) => b - a).splice(0, n).reverse();
+}
+
+// console.log(largest(2, [7,6,5,4,3,2,1]));
+// console.log(largest(7, [9, 1, 50, 22, 3, 13, 2, 63, 5]));
