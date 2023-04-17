@@ -1776,3 +1776,13 @@ function largest(n, array) {
 
 // console.log(largest(2, [7,6,5,4,3,2,1]));
 // console.log(largest(7, [9, 1, 50, 22, 3, 13, 2, 63, 5]));
+
+function sixToast(num) {
+  return num === 6? 0: 
+  num  > 6? num  - 6  : 6 - num;
+
+}
+
+// console.log(sixToast(6));
+// console.log(sixToast(17));
+// console.log(sixToast(3));
