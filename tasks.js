@@ -1804,3 +1804,8 @@ for(let i = 0; i < 1000; i++){
    websites.push(str);
 }
 // console.log(websites);
+
+function goals (...a) {
+  return a.reduce((c,i) => c + i);
+}
+// console.log(goals(43, 10, 5));
