@@ -1796,3 +1796,11 @@ function gimme (triplet) {
 // console.log(gimme([2.1, 3.2, 1.4])); // 0
 // console.log(gimme([5.9, 10.4, 14.2])); // 1
 // console.log(gimme([46, 5, -33])); //  2
+
+
+var websites = []
+let str = "codewars";
+for(let i = 0; i < 1000; i++){
+   websites.push(str);
+}
+// console.log(websites);
