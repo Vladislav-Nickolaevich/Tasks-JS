@@ -1809,3 +1809,11 @@ function goals (...a) {
   return a.reduce((c,i) => c + i);
 }
 // console.log(goals(43, 10, 5));
+
+
+function shortenToDate(longDate) {
+  let numberOfComma =  longDate.split('').findIndex(el => el === ',');
+  return longDate.slice(0, numberOfComma);
+}
+
+// console.log(shortenToDate("Friday May 2, 9am"));
