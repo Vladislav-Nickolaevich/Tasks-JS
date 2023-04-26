@@ -1817,3 +1817,10 @@ function shortenToDate(longDate) {
 }
 
 // console.log(shortenToDate("Friday May 2, 9am"));
+
+
+function nameShuffler(str){
+  return str.split(' ').reverse().join(' ');
+}
+
+console.log(nameShuffler('Mary jeggins'));
