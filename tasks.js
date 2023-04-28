@@ -1823,4 +1823,11 @@ function nameShuffler(str){
   return str.split(' ').reverse().join(' ');
 }
 
-console.log(nameShuffler('Mary jeggins'));
+// console.log(nameShuffler('Mary jeggins'));
+
+function nthEven(n){
+  return n * 2 - 2;
+}
+
+// console.log(nthEven(100));
+// console.log(nthEven(1));
