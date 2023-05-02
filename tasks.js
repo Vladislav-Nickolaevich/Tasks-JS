@@ -1831,3 +1831,19 @@ function nthEven(n){
 
 // console.log(nthEven(100));
 // console.log(nthEven(1));
+
+
+function lastDigit(n, d) {
+  let nArr = String(n).split('');
+  if(d > nArr.length){
+    return nArr.map(e => +e);
+  } else if(d <= 0){
+    return [];
+  }
+  return nArr.splice(nArr.length - d).map(e => +e);
+}
+
+// console.log(lastDigit(123767,4));
+// console.log(lastDigit(0,1));
+// console.log(lastDigit(34625647867585,10));
+// console.log(lastDigit(214123444, 10));
