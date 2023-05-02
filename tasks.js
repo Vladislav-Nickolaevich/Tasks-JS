@@ -1847,3 +1847,17 @@ function lastDigit(n, d) {
 // console.log(lastDigit(0,1));
 // console.log(lastDigit(34625647867585,10));
 // console.log(lastDigit(214123444, 10));
+
+
+function array(string) {
+    let first = string.split('').findIndex(el => el === ',') + 1;
+    let last =  -string.split('').reverse().findIndex(el => el === ',') - 1;
+    let result =  string.slice(first, last).split('').map(el => el.replace(',', ' ')).join('');
+    return result.length > 0? result: null;
+}
+
+// console.log(array("1,2,3,4,5"));
+// console.log(array("1"));
+// console.log(array('A1,B2,C3,D4,E5'));
+// console.log(array('A1,B2'));
+// console.log(array('1,2,3'));
