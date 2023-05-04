@@ -1868,4 +1868,20 @@ function fireFight(s){
     return s.replace(/Fire/g, '~~');
 }
 
-console.log(fireFight("Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast"));
+// console.log(fireFight("Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast"));
+
+function secondSymbol(s, symbol) {
+let num = s
+          .split('')
+          .map((e, i) => e === symbol? i: '')
+          .filter( e => e !== '');
+return num.length > 1? +num[1]: -1;
+
+}
+
+// console.log(secondSymbol('Hello world!!!','l'));
+// console.log(secondSymbol('Hello world!!!','o'));
+// console.log(secondSymbol('Hello world!!!','A'));
+// console.log(secondSymbol('LbLNVZUmzqNUXRKUCIPNeRjuduItsoShqzdcGJNnNf', 'L'));
+// console.log(secondSymbol('npBwowdspGpdbadALDVjYvTIfIsEsXnfBUTlJuGLOklceRdIsZGgzHHwNUfUyzfspdGpVLZAYOrvXuSqahzhgiiHUpaIHnyl ', 'o'));
+// console.log(secondSymbol('', 'q'));
