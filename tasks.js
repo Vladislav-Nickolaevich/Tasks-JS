@@ -1861,3 +1861,11 @@ function array(string) {
 // console.log(array('A1,B2,C3,D4,E5'));
 // console.log(array('A1,B2'));
 // console.log(array('1,2,3'));
+
+
+
+function fireFight(s){
+    return s.replace(/Fire/g, '~~');
+}
+
+console.log(fireFight("Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast"));
