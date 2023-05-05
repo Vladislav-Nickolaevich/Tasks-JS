@@ -1885,3 +1885,14 @@ return num.length > 1? +num[1]: -1;
 // console.log(secondSymbol('LbLNVZUmzqNUXRKUCIPNeRjuduItsoShqzdcGJNnNf', 'L'));
 // console.log(secondSymbol('npBwowdspGpdbadALDVjYvTIfIsEsXnfBUTlJuGLOklceRdIsZGgzHHwNUfUyzfspdGpVLZAYOrvXuSqahzhgiiHUpaIHnyl ', 'o'));
 // console.log(secondSymbol('', 'q'));
+
+
+
+function flattenAndSort(array) {
+  let newArr = [];
+  array.map(el => a.push(...el));
+  return newArr.sort((a,b) => a - b);
+}
+// console.log(flattenAndSort([[], []]));
+// console.log(flattenAndSort([[], [1]]));
+// console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]));
