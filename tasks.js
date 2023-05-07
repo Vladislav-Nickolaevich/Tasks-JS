@@ -1896,3 +1896,18 @@ function flattenAndSort(array) {
 // console.log(flattenAndSort([[], []]));
 // console.log(flattenAndSort([[], [1]]));
 // console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]));
+
+
+function sumFactorial(arr){
+  let result = [];
+  arr.map(el => [el].map(e => {
+    let middleResult = [];
+    for(let i = 1; i <= e; i++){
+      middleResult.push(i)
+    }
+    result.push(middleResult.reduce((c, i) => c * i));
+  }));
+ return result.reduce((c,i) => c + i);
+}
+
+// console.log(sumFactorial([4,6]));
