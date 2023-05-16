@@ -1911,3 +1911,14 @@ function sumFactorial(arr){
 }
 
 // console.log(sumFactorial([4,6]));
+
+function alternate(n, firstValue, secondValue){
+  let arr = [];
+  for(let i = 0; i < n; i ++){
+    arr.push(firstValue,secondValue);
+  }
+  return arr.slice(0, arr.length / 2);
+}
+
+// console.log(alternate(5, true, false));
+// console.log(alternate(84, 'e1ogg', '5ziqel'));
