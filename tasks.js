@@ -1922,3 +1922,11 @@ function alternate(n, firstValue, secondValue){
 
 // console.log(alternate(5, true, false));
 // console.log(alternate(84, 'e1ogg', '5ziqel'));
+
+
+function removeChar(str){
+  return str.slice(1, -1);
+ }
+
+console.log(removeChar('eloquent'));
+console.log(removeChar('country'));
