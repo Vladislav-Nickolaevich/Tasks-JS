@@ -1928,5 +1928,21 @@ function removeChar(str){
   return str.slice(1, -1);
  }
 
-console.log(removeChar('eloquent'));
-console.log(removeChar('country'));
+// console.log(removeChar('eloquent'));
+// console.log(removeChar('country'));
+
+
+function splitAndMerge(string, separator) {
+  return string
+              .split(' ')
+              .map(e => [...e.split('')
+                             .map(e => e + separator)
+                             .join('')]
+                             .join('')
+                             .slice(0, -1))
+              .join(' ');
+}
+
+// console.log(splitAndMerge("My name is John"," "));
+// console.log(splitAndMerge("My name is John","-"));
+
