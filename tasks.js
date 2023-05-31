@@ -1946,3 +1946,10 @@ function splitAndMerge(string, separator) {
 // console.log(splitAndMerge("My name is John"," "));
 // console.log(splitAndMerge("My name is John","-"));
 
+
+
+function toAcronym(inp){
+  return inp.split(' ').map(e => e[0].toUpperCase()).join('');
+}
+
+// console.log(toAcronym("hyper text markup language"));
