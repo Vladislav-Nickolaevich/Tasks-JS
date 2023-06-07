@@ -1959,3 +1959,20 @@ function twoOldestAges(ages){
     return ages.sort((a,b) => a - b).slice(ages.length - 2);
 }
 // console.log(twoOldestAges([1,5,87,45,8,8]));
+
+
+
+// const a = parseInt(prompt('Enter a decimal number: '));
+
+// let binary = a.toString(2);
+// console.log(binary)
+
+function reverseNumber(n) {
+  return n > 0?
+    +String(n).split('').reverse().join(''):
+    -String(n).slice(1).split('').reverse('').join('')
+}
+
+// console.log(reverseNumber(123));
+// console.log(reverseNumber(-456));
+// console.log(reverseNumber(1000));
