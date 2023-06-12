@@ -1976,3 +1976,38 @@ function reverseNumber(n) {
 // console.log(reverseNumber(123));
 // console.log(reverseNumber(-456));
 // console.log(reverseNumber(1000));
+
+var Calculator = {
+  add(...rest){
+    return [...rest].reduce((c, i) => c + i);
+  },
+  subtract(...rest){
+    return [...rest].reduce((c, i) => c - i);
+  },
+  multiply(...rest){
+    return [...rest].reduce((c, i) => c * i);
+  },
+  divide(a, b){
+    return a === 0 || b === 0? false: a / b;
+  }
+};
+// console.log(Calculator.add(3, 4, 5));
+// console.log(Calculator.subtract(3, 4, 5));
+// console.log(Calculator.multiply(3, 4));
+// console.log(Calculator.divide(0, 4));
+// console.log(Calculator.divide(4, 4));
+
+
+
+function contamination(text, char){
+  let newStr = '';
+  for(let i = 0; i < text.length; i++){
+    newStr+= char;
+  }
+    return text.length === 0 || char.length === 0? '': newStr;
+}
+
+// console.log(contamination("abc","z"));
+// console.log(contamination("","z"));
+// console.log(contamination("_3ebzgh4","&"));
+// console.log(contamination("//case"," "));
