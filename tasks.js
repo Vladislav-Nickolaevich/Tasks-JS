@@ -2011,3 +2011,38 @@ function contamination(text, char){
 // console.log(contamination("","z"));
 // console.log(contamination("_3ebzgh4","&"));
 // console.log(contamination("//case"," "));
+
+
+const findUserDB = (id) => {
+  let users = [
+    {id: 1, name: 'Alex', friends: 2},
+    {id: 2, name: 'Vanya', friends: 3},
+    {id: 3, name: 'Vera', friends: 4},
+    {id: 4, name: 'Vlad', friends: null},
+  ];
+
+  let userFindById = users.find(el => el.id === id);
+
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      if(!userFindById){
+        rej('Some error');
+      } else {
+        res(userFindById);
+      }
+    }, 1000);
+  });
+};
+
+findUserDB(1)
+.then(data => {
+  console.log(data);
+  return data.friends;
+})
+.then(friend => {
+  console.log(friend);
+  return findUserDB(friend);
+})
+.then(data => {
+  console.log(data);
+});
