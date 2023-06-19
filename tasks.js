@@ -2034,15 +2034,24 @@ const findUserDB = (id) => {
   });
 };
 
-findUserDB(1)
-.then(data => {
-  console.log(data);
-  return data.friends;
-})
-.then(friend => {
-  console.log(friend);
-  return findUserDB(friend);
-})
-.then(data => {
-  console.log(data);
-});
+// findUserDB(1)
+// .then(data => {
+//   console.log(data);
+//   return data.friends;
+// })
+// .then(friend => {
+//   console.log(friend);
+//   return findUserDB(friend);
+// })
+// .then(data => {
+//   console.log(data);
+// });
+
+
+function findNeedle(haystack) {
+  let text =  "found the needle at position ";
+  let ind = haystack.findIndex(el => el === "needle");
+  return text + ind;
+}
+
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
