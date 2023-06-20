@@ -2088,3 +2088,8 @@ function oddOrEven(array) {
 // console.log(oddOrEven([]));
 // console.log(oddOrEven([0, 1, 4]));
 // console.log(oddOrEven([0, -1, -5]));
+
+function seatsInTheater(nCols, nRows, col, row) {
+  return (nCols * nRows) - (row * nCols) - ((col - 1) * (nRows - row))
+}
+// console.log(seatsInTheater(16,11,5,3));
