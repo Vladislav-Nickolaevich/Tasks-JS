@@ -2093,3 +2093,11 @@ function seatsInTheater(nCols, nRows, col, row) {
   return (nCols * nRows) - (row * nCols) - ((col - 1) * (nRows - row))
 }
 // console.log(seatsInTheater(16,11,5,3));
+
+function position(letter){
+  let alp = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  return `Position of alphabet: ${alp.findIndex(el => el === letter) + 1}`;
+  }
+
+// console.log(position("z"));
+// console.log(position("e"));
