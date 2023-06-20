@@ -2075,3 +2075,16 @@ const binaryArrayToNumber = arr => {
 // console.log(binaryArrayToNumber([0, 0, 0, 1]));
 // console.log(binaryArrayToNumber([0, 1, 1, 0]));
 // console.log(binaryArrayToNumber([1, 1, 1, 1]));
+
+
+function oddOrEven(array) {
+  if(array.length === 0){
+    return 'even';
+  }
+  return array.reduce((c, i) => c + i) % 2 != 0? 'odd': 'even';
+}
+
+// console.log(oddOrEven([0]));
+// console.log(oddOrEven([]));
+// console.log(oddOrEven([0, 1, 4]));
+// console.log(oddOrEven([0, -1, -5]));
