@@ -2101,3 +2101,10 @@ function position(letter){
 
 // console.log(position("z"));
 // console.log(position("e"));
+
+
+function getChar(c){
+  return String.fromCharCode(c);
+}
+
+// console.log(getChar(55));
