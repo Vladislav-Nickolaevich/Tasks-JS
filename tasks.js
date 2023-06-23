@@ -2132,3 +2132,8 @@ function pipeFix(numbers){
 }
 
 // console.log(pipeFix([1,2,3,5,6,8,9]));
+
+
+const stringToArray = string => string.split(' ');
+
+// console.log(stringToArray("I love arrays they are my favorite"));
