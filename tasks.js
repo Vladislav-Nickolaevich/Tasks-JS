@@ -2119,3 +2119,16 @@ function peopleWithAgeDrink(old) {
           "drink whisky";
 }
 // console.log(peopleWithAgeDrink(22));
+
+
+function pipeFix(numbers){
+  let numberOne = numbers[0];
+  let numberFinish = numbers[numbers.length - 1];
+  let result = [];
+  for(let i = numberOne; i <= numberFinish; i++){
+    result.push(i);
+  }
+  return result;
+}
+
+// console.log(pipeFix([1,2,3,5,6,8,9]));
