@@ -2137,3 +2137,13 @@ function pipeFix(numbers){
 const stringToArray = string => string.split(' ');
 
 // console.log(stringToArray("I love arrays they are my favorite"));
+
+
+
+function solution(a, b){
+  return a.length < b.length? a + b + a: b + a + b;
+}
+
+
+console.log(solution('45', '1'));
+console.log(solution('Soon', 'Me'));
