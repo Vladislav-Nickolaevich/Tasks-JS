@@ -2145,5 +2145,20 @@ function solution(a, b){
 }
 
 
-console.log(solution('45', '1'));
-console.log(solution('Soon', 'Me'));
+// console.log(solution('45', '1'));
+// console.log(solution('Soon', 'Me'));
+
+
+function finalGrade (exam, projects) {
+  return exam > 90 || projects > 10?
+        100:
+        exam > 75 && projects >= 5?
+        90:
+        exam > 50 && projects >= 2?
+        75:
+        0;
+}
+
+// console.log(finalGrade(100, 12));
+// console.log(finalGrade(85, 5));
+// console.log(finalGrade(67, 9));
