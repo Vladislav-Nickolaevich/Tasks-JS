@@ -2162,3 +2162,11 @@ function finalGrade (exam, projects) {
 // console.log(finalGrade(100, 12));
 // console.log(finalGrade(85, 5));
 // console.log(finalGrade(67, 9));
+
+
+function isTriangle(a,b,c){
+  return a + b > c && b + c > a && a + c > b ;
+ }
+// console.log(isTriangle(1, 2, 2));
+// console.log(isTriangle(7, 2, 2));
+// console.log(isTriangle(8,10,1));
