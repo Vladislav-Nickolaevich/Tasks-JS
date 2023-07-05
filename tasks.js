@@ -2170,3 +2170,15 @@ function isTriangle(a,b,c){
 // console.log(isTriangle(1, 2, 2));
 // console.log(isTriangle(7, 2, 2));
 // console.log(isTriangle(8,10,1));
+
+
+
+const reverseSeq = n => {
+  const arr = [];
+  for(let i = 1; i <= n; i++){
+    arr.push(i);
+  }
+  return arr.reverse();
+};
+
+// console.log(reverseSeq(5));
