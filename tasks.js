@@ -2182,3 +2182,11 @@ const reverseSeq = n => {
 };
 
 // console.log(reverseSeq(5));
+
+
+function friend(friends){
+  const result = friends.filter(f => f.length === 4);
+  return result;
+}
+
+// console.log(friend(["Ryan", "Kieran", "Mark"]));
