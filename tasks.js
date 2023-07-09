@@ -2190,3 +2190,11 @@ function friend(friends){
 }
 
 // console.log(friend(["Ryan", "Kieran", "Mark"]));
+
+
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((c, i) => c + i, 0);
+}
+
+
+// console.log(arrayPlusArray([-1, -2, -3], [-4, -5, -6]));
