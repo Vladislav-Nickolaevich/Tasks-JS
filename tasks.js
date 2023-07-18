@@ -2198,3 +2198,32 @@ function arrayPlusArray(arr1, arr2) {
 
 
 // console.log(arrayPlusArray([-1, -2, -3], [-4, -5, -6]));
+
+
+
+
+function greet(language){
+  const langWelcome = {
+    english: 'Welcome',
+    czech: 'Vitejte',
+    danish: 'Velkomst',
+    dutch: 'Welkom',
+    estonian: 'Tere tulemast',
+    finnish: 'Tervetuloa',
+    flemish: 'Welgekomen',
+    french: 'Bienvenue',
+    german: 'Willkommen',
+    irish: 'Failte',
+    italian: 'Benvenuto',
+    latvian: 'Gaidits',
+    lithuanian: 'Laukiamas',
+    polish: 'Witamy',
+    spanish: 'Bienvenido',
+    swedish: 'Valkommen',
+    welsh: 'Croeso'
+  };
+  return !langWelcome[language]? langWelcome.english: langWelcome[language];
+}
+
+// console.log(greet('aa'));
+// console.log(greet('english'));
