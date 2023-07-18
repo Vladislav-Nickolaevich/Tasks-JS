@@ -2242,3 +2242,10 @@ function cookie(x){
 // console.log(cookie("Ryan"));
 // console.log(cookie(2.5));
 // console.log(cookie(false));
+
+function whoIsPaying(name){
+  return name.length > 2? [name, name.slice(0,2)]: [name];
+}
+// console.log(whoIsPaying("Mexico"));
+// console.log(whoIsPaying("Me"));
+// console.log(whoIsPaying(""));
