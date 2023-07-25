@@ -2249,3 +2249,44 @@ function whoIsPaying(name){
 // console.log(whoIsPaying("Mexico"));
 // console.log(whoIsPaying("Me"));
 // console.log(whoIsPaying(""));
+
+function powerOf4(n) {
+  if(n === 1){
+    return true;
+  }else if(n === 0 || !Number.isInteger(n / 4)){
+    return false;
+  }else if(typeof n === 'number'){
+    return  Number.isInteger(Math.sqrt(n));
+  }
+  return false;
+}
+
+// console.log(powerOf4(16));
+// console.log(powerOf4(1024));
+// console.log(powerOf4(32));
+// console.log(powerOf4(0));
+// console.log(powerOf4(1));
+// console.log(powerOf4('4'));
+
+
+
+function center (strng, width, fill = ' ') {
+  let witdthOfFill = width - strng.length ;
+  if(witdthOfFill < 0){
+    return strng;
+  } else{
+    let str = '';
+    for(let i = 0; i < Math.ceil(witdthOfFill / 2); i++){
+      str += fill;
+    }
+    let result = str + strng + str;
+    return !Number.isInteger(witdthOfFill / 2)?
+                    result.slice(0, result.length - 1):
+                    result;          
+  }
+}
+
+// console.log(center('a', 3));
+// console.log(center('abc', 10, '_'));
+// console.log(center('abcdefg', 2));
+// console.log(center("qzEWKTivCWhYjsdvXMrSlsiY", 60, 'F'));
