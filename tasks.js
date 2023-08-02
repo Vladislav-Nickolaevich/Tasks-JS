@@ -2290,3 +2290,8 @@ function center (strng, width, fill = ' ') {
 // console.log(center('abc', 10, '_'));
 // console.log(center('abcdefg', 2));
 // console.log(center("qzEWKTivCWhYjsdvXMrSlsiY", 60, 'F'));
+
+function distinct(a) {
+  return [...new Set(a)];
+}
+// console.log(distinct([1,2]));
