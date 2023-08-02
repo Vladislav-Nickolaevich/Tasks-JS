@@ -2295,3 +2295,11 @@ function distinct(a) {
   return [...new Set(a)];
 }
 // console.log(distinct([1,2]));
+
+var capitals = function (word) {
+  let result = [];
+  word.split('').filter((el, i) => el === el.toUpperCase()? result.push(i): el);
+  return result;
+};
+
+// console.log(capitals('CodEWaRs'));
