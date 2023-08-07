@@ -2303,3 +2303,18 @@ var capitals = function (word) {
 };
 
 // console.log(capitals('CodEWaRs'));
+
+let candidate1 = { minSalary: 120000 },
+    job1 = { maxSalary: 130000 },
+    job2 = { maxSalary: 80000 },
+    job3 = {};
+
+function match(candidate, job) {
+  if(!candidate.minSalary || !job.maxSalary){
+    throw  'Error'
+  }
+  return candidate.minSalary * 0.9 <= job.maxSalary
+}
+// console.log(match(candidate1, job1));
+// console.log(match(candidate1, job2));
+// console.log(match(candidate1, job3));
