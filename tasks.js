@@ -2324,3 +2324,12 @@ function processData(data){
 }
 // console.log(processData([[2, 5], [3, 4], [8, 7]]));
 // console.log(processData([[2, 9], [2, 4], [7, 5]]));
+
+
+function areaCode(text) {
+ const start = text.indexOf('(');
+ const end = text.indexOf(')');
+ return text.slice(start + 1, end);
+}
+
+// console.log(areaCode("The supplier's phone number is (555) 867-5309"));
