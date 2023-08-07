@@ -2318,3 +2318,9 @@ function match(candidate, job) {
 // console.log(match(candidate1, job1));
 // console.log(match(candidate1, job2));
 // console.log(match(candidate1, job3));
+
+function processData(data){
+  return data.map(el => el[0] - el[1]).reduce((c, i) => c * i);
+}
+// console.log(processData([[2, 5], [3, 4], [8, 7]]));
+// console.log(processData([[2, 9], [2, 4], [7, 5]]));
