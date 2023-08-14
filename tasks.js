@@ -2339,3 +2339,13 @@ function printArray(array){
 }
 
 // console.log(printArray([2,3,4,5]));
+
+
+function dropCap(n) {
+  return n.split(' ')
+  .map(el => el.length < 3 || el === ''? el: el[0].toUpperCase() + el.slice(1).toLowerCase())
+  .join(' ');
+}
+
+// console.log(dropCap('Revelation of the contents outraged American public opinion, and helped generate'));
+// console.log(dropCap('more  than    one space between words'));
