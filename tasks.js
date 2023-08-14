@@ -2333,3 +2333,9 @@ function areaCode(text) {
 }
 
 // console.log(areaCode("The supplier's phone number is (555) 867-5309"));
+
+function printArray(array){
+  return array.join(',');
+}
+
+// console.log(printArray([2,3,4,5]));
