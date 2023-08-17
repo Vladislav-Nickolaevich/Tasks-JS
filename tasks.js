@@ -2349,3 +2349,16 @@ function dropCap(n) {
 
 // console.log(dropCap('Revelation of the contents outraged American public opinion, and helped generate'));
 // console.log(dropCap('more  than    one space between words'));
+
+
+function twoArePositive(a, b, c) {
+  let one = a > 0;
+  let two = b > 0;
+  let three = c > 0;
+
+  return one && two && !three || one && three && !two || two && three && !one;
+}
+
+// console.log(twoArePositive(2, 4, -3));
+// console.log(twoArePositive(-4, 6, 0));
+// console.log(twoArePositive(4, 6, 10));
