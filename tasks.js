@@ -2362,3 +2362,10 @@ function twoArePositive(a, b, c) {
 // console.log(twoArePositive(2, 4, -3));
 // console.log(twoArePositive(-4, 6, 0));
 // console.log(twoArePositive(4, 6, 10));
+
+
+function main (verb, noun){
+  return verb + noun;
+}
+
+// console.log(main('take ', 'item'));
