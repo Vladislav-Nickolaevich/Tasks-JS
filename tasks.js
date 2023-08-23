@@ -2369,3 +2369,16 @@ function main (verb, noun){
 }
 
 // console.log(main('take ', 'item'));
+
+function drawStairs(n) {
+  let str = '';
+  for(let i = 0; i < n; i++){
+    for(let k = 0; k < i; k++){
+      str += ' ';
+    }
+    str += 'I\n';
+  }
+  return str.slice(0, str.length - 1) ;
+}
+
+// console.log(drawStairs(3));
