@@ -2382,3 +2382,11 @@ function drawStairs(n) {
 }
 
 // console.log(drawStairs(3));
+
+function getStatus(isBusy) {
+  var msg = (isBusy ? "busy" : "available");
+  return ({status: msg});
+ 
+}
+
+// console.log(getStatus(true).status);
