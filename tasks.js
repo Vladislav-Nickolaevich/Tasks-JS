@@ -2394,4 +2394,12 @@ function getStatus(isBusy) {
 
 const getASCII = c => c.charCodeAt(0);
 
-console.log(getASCII('A'));
+// console.log(getASCII('A'));
+
+
+function twoSort(s) {
+  const firstWort = s.sort()[0];
+  return firstWort.split('').map(e => e + '***').join('').slice(0, -3);
+}
+
+// console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
