@@ -2403,3 +2403,22 @@ function twoSort(s) {
 }
 
 // console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+
+
+function to24hourtime(hour, minute, period) {
+  let checkMinute = minute >= 10? minute: '0' + minute;
+  let checkZero = hour === 12;
+  if(period === 'am'){
+    let num = hour === 10 || hour === 11;
+    return num? '' + hour + checkMinute:
+            checkZero? '00' + checkMinute:
+            '0' + hour + checkMinute;
+  } else {
+    let endResult = '' + checkMinute;
+    return checkZero? hour + endResult:  hour + 12 + endResult;
+  }}
+
+// console.log((to24hourtime(12,  0, "am")));
+// console.log((to24hourtime(12,  51, "pm")));
+
+
