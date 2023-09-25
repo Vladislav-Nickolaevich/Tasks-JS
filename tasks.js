@@ -2422,3 +2422,10 @@ function to24hourtime(hour, minute, period) {
 // console.log((to24hourtime(12,  51, "pm")));
 
 
+function sumNoDuplicates(numList) {
+  if(numList.length === 0) return 0;
+  let findDublicate = numList.filter((e, i) => numList.indexOf(e) !== i);
+  let result = numList.filter(e => !findDublicate.includes(e));
+  return result.reduce((c, i) => c + i, 0);
+}
+// console.log(sumNoDuplicates([1, 1, 2, 2, 3]));
