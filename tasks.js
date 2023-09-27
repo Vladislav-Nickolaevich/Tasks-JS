@@ -2429,3 +2429,13 @@ function sumNoDuplicates(numList) {
   return result.reduce((c, i) => c + i, 0);
 }
 // console.log(sumNoDuplicates([1, 1, 2, 2, 3]));
+
+function solution(pairs){
+  let str = '';
+  for(let key in pairs){
+    str += key + ' = ' + pairs[key] + ',' 
+  }
+  return str.slice(0, str.length - 1);
+}
+
+// console.log(solution({a: 1, b: '2'}));
