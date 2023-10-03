@@ -2439,3 +2439,22 @@ function solution(pairs){
 }
 
 // console.log(solution({a: 1, b: '2'}));
+
+
+function initializeNames(name){
+  let checkName = name.split(' ').length <= 2;
+  if(checkName){
+    return name;
+  } else {
+    let newName = name.split(' ');
+    let firstName = newName.splice(0, 1).join('') + ' ';
+    let lastName = newName.splice(-1, 1).join('');
+    let middleName = newName.map(e => e[0] + '. ').join('');
+    return firstName + middleName + lastName;
+  }
+}
+
+// console.log(initializeNames('Jack Ryan'));
+// console.log(initializeNames('Lois Mary Lane'));
+// console.log(initializeNames('Dimitri'));
+// console.log(initializeNames('Alice Betty Catherine Davis'));
