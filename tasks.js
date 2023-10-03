@@ -2458,3 +2458,13 @@ function initializeNames(name){
 // console.log(initializeNames('Lois Mary Lane'));
 // console.log(initializeNames('Dimitri'));
 // console.log(initializeNames('Alice Betty Catherine Davis'));
+
+
+function getLargerNumbers(a, b) {
+  return a.map((e, i )=>  e < b[i]? b[i]: e );
+}
+
+//  console.log(getLargerNumbers([1, 4, 5], [2, 6, 3]));
+
+
+
