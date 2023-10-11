@@ -2467,4 +2467,14 @@ function getLargerNumbers(a, b) {
 //  console.log(getLargerNumbers([1, 4, 5], [2, 6, 3]));
 
 
+function factors(integer, limit){
+    let arr = [];
+    for(let i = limit; i <= integer; i++){
+      if(integer % i === 0){
+        arr.push(i);
+      }
+    }
+    return arr;
+}
 
+// console.log(factors(30, 2));
