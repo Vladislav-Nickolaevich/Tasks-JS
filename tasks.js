@@ -2478,3 +2478,14 @@ function factors(integer, limit){
 }
 
 // console.log(factors(30, 2));
+
+
+function bigToSmall(arr){
+  const newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    newArr.push(...arr[i])
+  }
+  return newArr.sort((a, b) => a < b? 1: -1).map(e => e + '>').join('').slice(0, -1);
+}
+
+// console.log(bigToSmall([[1,2],[3,4],[5,6]]));
