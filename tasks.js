@@ -2489,3 +2489,11 @@ function bigToSmall(arr){
 }
 
 // console.log(bigToSmall([[1,2],[3,4],[5,6]]));
+
+
+function whoseMove(lastPlayer, win) {
+  return lastPlayer && win? lastPlayer: 
+            lastPlayer === 'black'? 'white': 'black';
+}
+
+// console.log(whoseMove('white', true));
