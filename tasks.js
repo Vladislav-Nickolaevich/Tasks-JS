@@ -2497,3 +2497,14 @@ function whoseMove(lastPlayer, win) {
 }
 
 // console.log(whoseMove('white', true));
+
+function neutralise(s1, s2) {
+  let result = '';
+  for(let i = 0; i < s1.length; i++){
+      result += s1[i] === s2[i]? s1[i]: 0;
+  }
+  return result;
+}
+
+// console.log(neutralise("-+-+-+", "-+-+-+"));
+// console.log(neutralise("-++-", "-+-+"));
