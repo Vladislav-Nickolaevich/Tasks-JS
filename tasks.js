@@ -2508,3 +2508,20 @@ function neutralise(s1, s2) {
 
 // console.log(neutralise("-+-+-+", "-+-+-+"));
 // console.log(neutralise("-++-", "-+-+"));
+
+
+function spinAround(turns) {
+  if(turns.length < 3){
+    return 0;
+  } 
+  const rightResult =  turns.filter(e => e === 'right').length;
+  const lefttResult =  turns.filter(e => e === 'left').length;
+
+  const result = Math.abs(rightResult - lefttResult);
+  return result < 4? 0: Math.floor(result / 4);
+}
+
+
+// console.log(spinAround(["right","right","right","right","right","right","right","right","left","left"]));
+// console.log(spinAround(['right', 'right', 'right', 'left', 'right', 'right']));
+// console.log(spinAround(['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']));
