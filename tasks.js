@@ -2525,3 +2525,11 @@ function spinAround(turns) {
 // console.log(spinAround(["right","right","right","right","right","right","right","right","left","left"]));
 // console.log(spinAround(['right', 'right', 'right', 'left', 'right', 'right']));
 // console.log(spinAround(['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']));
+
+
+function reverseLetter(str) {
+  return str.split('').filter(e => e.match(/[a-zA-Z]/g)).reverse().join('');
+}
+
+// console.log(reverseLetter("krishan"));
+// console.log(reverseLetter("ultr53o?n"));
