@@ -2541,3 +2541,38 @@ function mergeArrays(a, b) {
 
 // console.log(mergeArrays([1, 3, 5], [2, 4, 6]));
 // console.log(mergeArrays([1, 3, 5], [1, 3, 6]));
+
+function twoHighest(arr) {
+  let uniq = [...new Set(arr)];
+  if(arr.length === 0) return [];
+  if(uniq.length === 1) {
+    return uniq;
+  }
+  return uniq.sort((a, b) => b - a).slice(0, 2);
+}
+
+
+// console.log(twoHighest([15, 20, 20, 17]));
+// console.log(twoHighest([59400,55690,24268,20708,70568]));
+
+
+
+
+
+
+
+
+  
+//  let maxValue = Math.max(...uniq) //20
+//  let maxValueIndex = uniq.indexOf(maxValue); //1
+
+//  let sortUniq = uniq.map(e => e).sort((a, b) => a - b)// 15 17 20
+//  let maxValueTwo = sortUniq[sortUniq.length - 2] // 17
+//  let maxValueTwoIndex = uniq.indexOf(maxValueTwo)
+
+// //  return [maxValueIndex, maxValueTwoIndex]
+//  if(maxValueIndex < maxValueTwoIndex) {
+//   return [maxValue, maxValueTwo]
+//  } else {
+//   return [ maxValueTwo, maxValue]
+//  }
