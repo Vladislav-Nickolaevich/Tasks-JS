@@ -2533,3 +2533,11 @@ function reverseLetter(str) {
 
 // console.log(reverseLetter("krishan"));
 // console.log(reverseLetter("ultr53o?n"));
+
+
+function mergeArrays(a, b) {
+  return [...new Set(a.concat(b).sort((a, b) => a - b))];
+}
+
+// console.log(mergeArrays([1, 3, 5], [2, 4, 6]));
+// console.log(mergeArrays([1, 3, 5], [1, 3, 6]));
