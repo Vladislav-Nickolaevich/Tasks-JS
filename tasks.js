@@ -2555,24 +2555,12 @@ function twoHighest(arr) {
 // console.log(twoHighest([15, 20, 20, 17]));
 // console.log(twoHighest([59400,55690,24268,20708,70568]));
 
+function hello(name = '') {
+  // return name === ''? 'Hello, World!': 'Hello, ' + name.split('').map(el => el(0).toUpperCase() + el.slice(1).toLowerCase).join('') + '!';
+  return name === ''? 'Hello, World!': 'Hello, ' + name.split(' ').map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join('') + '!';
+}
 
-
-
-
-
-
-
-  
-//  let maxValue = Math.max(...uniq) //20
-//  let maxValueIndex = uniq.indexOf(maxValue); //1
-
-//  let sortUniq = uniq.map(e => e).sort((a, b) => a - b)// 15 17 20
-//  let maxValueTwo = sortUniq[sortUniq.length - 2] // 17
-//  let maxValueTwoIndex = uniq.indexOf(maxValueTwo)
-
-// //  return [maxValueIndex, maxValueTwoIndex]
-//  if(maxValueIndex < maxValueTwoIndex) {
-//   return [maxValue, maxValueTwo]
-//  } else {
-//   return [ maxValueTwo, maxValue]
-//  }
+// console.log(hello('alice'));
+// console.log(hello('dsaSdsS'));
+// console.log(hello(''));
+// console.log(hello());
