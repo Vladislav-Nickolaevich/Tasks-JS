@@ -2563,3 +2563,14 @@ function hello(name = '') {
 // console.log(hello('dsaSdsS'));
 // console.log(hello(''));
 // console.log(hello());
+
+
+function mean(lst){
+  let num = 0;
+  let str = '';
+  lst.map(e => {
+    return isFinite(e)? num += +e: str += e;
+  })
+  return [num / str.length, str]
+}
+// console.log(mean( ["u", "6", "d", "1", "i", "w", "6", "s", "t", "4", "a", "6", "g", "1", "2", "w", "8", "o", "2", "0"]));
