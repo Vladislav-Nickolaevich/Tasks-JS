@@ -2556,7 +2556,6 @@ function twoHighest(arr) {
 // console.log(twoHighest([59400,55690,24268,20708,70568]));
 
 function hello(name = '') {
-  // return name === ''? 'Hello, World!': 'Hello, ' + name.split('').map(el => el(0).toUpperCase() + el.slice(1).toLowerCase).join('') + '!';
   return name === ''? 'Hello, World!': 'Hello, ' + name.split(' ').map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join('') + '!';
 }
 
