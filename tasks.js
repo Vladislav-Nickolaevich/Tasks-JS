@@ -2574,3 +2574,11 @@ function mean(lst){
   return [num / str.length, str]
 }
 // console.log(mean( ["u", "6", "d", "1", "i", "w", "6", "s", "t", "4", "a", "6", "g", "1", "2", "w", "8", "o", "2", "0"]));
+
+
+function calculate_total(subtotal, tax, tip) {
+  return +(subtotal * (100 + tax + tip) / 100 ).toFixed(2);
+  
+}
+// console.log(calculate_total(5, 5, 10));
+// console.log(calculate_total(36.97, 7, 15));
