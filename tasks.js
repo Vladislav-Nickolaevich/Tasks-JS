@@ -2592,3 +2592,12 @@ function replace(s){
 // console.log(replace("!Hi! Hi!"));
 // console.log(replace("aeiou"));
 // console.log(replace("ABCDE"));
+
+
+function esrever( str ){
+  let mark = str.slice(-1);
+  let stringReverse = str.split(' ').reverse().map(e => e.split('').reverse().join('')).join(' ')
+  return stringReverse.slice(1) + mark;
+}
+
+// console.log(esrever('an Easy one?'));
