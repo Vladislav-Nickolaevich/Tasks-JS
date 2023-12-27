@@ -2601,3 +2601,30 @@ function esrever( str ){
 }
 
 // console.log(esrever('an Easy one?'));
+
+
+function timeConvert(num) { 
+  if( num === 0 || num < 0){
+    return '00:00';
+  } 
+    if(num % 60 == 0){
+      let res = num / 60 + ':00';
+      return num / 60 < 10? '0' + res: res;
+    } else{
+        let newHour = Math.floor(num / 60);
+        let newMin = num - newHour * 60;
+
+        let resH = newHour < 10? '0' + newHour: newHour;
+        let resM = newMin < 10? '0' + newMin: newMin;
+
+        return resH + ':' + resM;
+    }
+}
+
+// console.log(timeConvert(0));
+// console.log(timeConvert(-6));
+// console.log(timeConvert(75));
+// console.log(timeConvert(970));
+// console.log(timeConvert(120));
+// console.log(timeConvert(60));
+// console.log(timeConvert(228));
