@@ -2582,3 +2582,13 @@ function calculate_total(subtotal, tax, tip) {
 }
 // console.log(calculate_total(5, 5, 10));
 // console.log(calculate_total(36.97, 7, 15));
+
+
+
+function replace(s){
+  return s.replace( /[aeiouAEIOU]/gi, '!');
+}
+
+// console.log(replace("!Hi! Hi!"));
+// console.log(replace("aeiou"));
+// console.log(replace("ABCDE"));
