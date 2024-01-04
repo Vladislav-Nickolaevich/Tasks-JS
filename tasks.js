@@ -2634,3 +2634,12 @@ function doubleChar(str) {
 }
 
 // console.log(doubleChar("abcd"));
+
+const arrCheck = value => {
+  let checkValue = value.map(e => Array.isArray(e)? 1: -1).reduce((c,i) => c + i, 0)
+  return Array.isArray(value) &&   checkValue === value.length
+}
+
+// console.log(arrCheck([]));
+// console.log(arrCheck([[1],[2],[3]]));
+// console.log(arrCheck([[],{}]));
