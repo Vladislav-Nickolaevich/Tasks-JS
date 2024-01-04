@@ -2628,3 +2628,9 @@ function timeConvert(num) {
 // console.log(timeConvert(120));
 // console.log(timeConvert(60));
 // console.log(timeConvert(228));
+
+function doubleChar(str) {
+    return str.split('').map(e => e.repeat(2)).join('');
+}
+
+// console.log(doubleChar("abcd"));
