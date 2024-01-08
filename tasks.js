@@ -2665,3 +2665,10 @@ function mygcd(x,y){
 // console.log(mygcd(30, 12));
 // console.log(mygcd(36, 12));
 
+function min(arr, toReturn) {
+  let copyArr = [...arr].sort((a,b) => a - b)[0];
+  return toReturn === 'value'? copyArr:arr.indexOf(copyArr); 
+}
+
+// console.log(min([1,2,3,4,5], 'index'));
+// console.log(min([1,2,3,4,5], 'value'));
