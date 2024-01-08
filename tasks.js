@@ -2643,3 +2643,15 @@ const arrCheck = value => {
 // console.log(arrCheck([]));
 // console.log(arrCheck([[1],[2],[3]]));
 // console.log(arrCheck([[],{}]));
+
+
+function danspower(num, power) {
+  let result = Math.pow(num, power)
+  return num === 0 || power === 0? 0: result  % 2 === 0? result: Math.round(result /10) * 10;
+}
+
+// console.log(danspower(5, 0));
+// console.log(danspower(0, 3));
+// console.log(danspower(5, 3));
+// console.log(danspower(6, 4));
+
