@@ -2655,3 +2655,13 @@ function danspower(num, power) {
 // console.log(danspower(5, 3));
 // console.log(danspower(6, 4));
 
+function mygcd(x,y){
+  if(y !== 0){
+    const c = x % y;
+    return mygcd(y, c);
+  }
+  return x;
+}
+// console.log(mygcd(30, 12));
+// console.log(mygcd(36, 12));
+
