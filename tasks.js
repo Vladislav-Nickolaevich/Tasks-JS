@@ -2672,3 +2672,14 @@ function min(arr, toReturn) {
 
 // console.log(min([1,2,3,4,5], 'index'));
 // console.log(min([1,2,3,4,5], 'value'));
+
+function getMissingElement(superImportantArray){
+  for (i = 0; i <= 9; i++) {
+    if (superImportantArray.indexOf(i) === -1) {
+      return i;
+    }
+  }
+}
+// console.log(getMissingElement( [0,5,1,3,2,9,7,6,4]));
+// console.log(getMissingElement( [3,2,4,5,7,0,8,6,1]));
+// console.log(getMissingElement( [3,2,4,5,7,9,8,6,1]));
