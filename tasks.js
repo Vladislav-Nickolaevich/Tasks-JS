@@ -2695,3 +2695,14 @@ const findDigit = function(num, nth){
 // console.log(findDigit(-2825, 3));
 // console.log(findDigit(-456, 4));
 // console.log(findDigit(28, -8));
+
+
+
+function cubeOdd(arr) {
+  let sum = arr.map(e => e % 2 !== 0? e * e * e: 0).reduce((c,i) => c + i);
+  return isFinite(sum)? sum: undefined;
+}
+
+// console.log(cubeOdd([1, 2, 3, 4]));
+// console.log(cubeOdd([-3,-2,2,3]));
+// console.log(cubeOdd(["a",12,9,"z",42]));
