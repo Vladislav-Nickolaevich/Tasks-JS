@@ -2683,3 +2683,15 @@ function getMissingElement(superImportantArray){
 // console.log(getMissingElement( [0,5,1,3,2,9,7,6,4]));
 // console.log(getMissingElement( [3,2,4,5,7,0,8,6,1]));
 // console.log(getMissingElement( [3,2,4,5,7,9,8,6,1]));
+
+const findDigit = function(num, nth){
+    if(nth <= 0) return -1;
+    let newNum = (String(num)).split('').reverse('').join('')
+    return isFinite(+newNum[nth - 1])? +newNum[nth - 1]: 0;
+};
+
+// console.log(findDigit(5673, 4));
+// console.log(findDigit(129, 2));
+// console.log(findDigit(-2825, 3));
+// console.log(findDigit(-456, 4));
+// console.log(findDigit(28, -8));
