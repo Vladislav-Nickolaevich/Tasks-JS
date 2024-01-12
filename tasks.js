@@ -2717,3 +2717,11 @@ function cookingTime(eggs) {
 }
 // console.log(cookingTime(4));
 // console.log(cookingTime(10));
+
+function gordon(a){
+  let vowel = /[eiou]/gi;
+  let newA = a.toUpperCase().split(' ').map(e => e + '!!!! ').join('').slice(0, -1);
+  return newA.replace(vowel, '*').replace(/A/g, '@');
+}
+
+// console.log(gordon('What feck damn cake'));
