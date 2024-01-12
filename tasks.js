@@ -2725,3 +2725,11 @@ function gordon(a){
 }
 
 // console.log(gordon('What feck damn cake'));
+function moveTen(s){
+  return s.split('').map(e => {
+    let newChar = e.charCodeAt(0) + 10;
+    return newChar > 122? String.fromCharCode(newChar - 26): String.fromCharCode(newChar);
+  }).join('');
+}
+
+// console.log(moveTen("testcase"));
