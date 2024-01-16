@@ -2733,3 +2733,30 @@ function moveTen(s){
 }
 
 // console.log(moveTen("testcase"));
+
+function arrange(arr){
+  let gramm = [];
+  let kg = [];
+  let tonn = [];
+
+  arr.filter(e =>{
+    if(e[e.length - 2] === 'K'){
+      let newE = e.slice(0, -2);
+      kg.push(newE);
+    } else if(e[e.length - 1] === 'T'){
+      let newE = e.slice(0, -1);
+      tonn.push(newE);
+    } else {
+      let newE = e.slice(0, -1);
+      gramm.push(newE);
+    }
+  });
+
+  let newGramm = gramm.length > 0 ? gramm.sort((a, b) => a - b).map(e => e + 'G'): [];
+  let newKg = kg.length > 0 ? kg.sort((a, b) => a - b).map(e => e + 'KG'): [];
+  let newTonn = tonn.length > 0 ? tonn.sort((a, b) => a - b).map(e => e + 'T'): [];
+  return newGramm.concat(newKg, newTonn);
+  
+}
+
+// console.log(arrange(["200G","300G","150G","100KG"]));
