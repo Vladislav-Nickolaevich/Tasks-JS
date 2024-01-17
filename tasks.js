@@ -2782,3 +2782,39 @@ function sumArray(array) {
 // console.log(sumArray([ 6, 2, 1, 8, 10 ]));
 // console.log(sumArray(null));
 // console.log(sumArray([]));
+
+
+function getDrinkByProfession(param){
+  let newParam = param.split(' ').map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join(' ');
+  switch(newParam){
+      case "Jabroni": 
+      return "Patron Tequila";
+      break;
+      
+      case "School Counselor":
+      return 	"Anything with Alcohol";
+      break;
+      
+      case "Programmer":
+      return "Hipster Craft Beer";
+      break;
+      
+      case "Bike Gang Member":
+      return "Moonshine";
+      break;
+      
+      case "Politician":
+      return "Your tax dollars";
+      break;
+      
+      case "Rapper":
+      return 'Cristal';
+      break;
+      
+      default:
+      return 'Beer';
+  }
+}
+
+// console.log(getDrinkByProfession("jabrOni"));
+// console.log(getDrinkByProfession("scHOOl counselor"));
