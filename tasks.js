@@ -2768,3 +2768,17 @@ function combat(health, damage) {
 
 // console.log(combat(100, 5));
 // console.log(combat(20, 30));
+
+function sumArray(array) {
+  if(!array){
+    return 0;
+  }
+
+  let newArr = array.sort((a, b) => a - b)
+  .slice(1, -1).reduce((c,i) => c + i, 0);
+  return newArr;
+}
+
+// console.log(sumArray([ 6, 2, 1, 8, 10 ]));
+// console.log(sumArray(null));
+// console.log(sumArray([]));
