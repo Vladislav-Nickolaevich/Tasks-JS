@@ -2818,3 +2818,24 @@ function getDrinkByProfession(param){
 
 // console.log(getDrinkByProfession("jabrOni"));
 // console.log(getDrinkByProfession("scHOOl counselor"));
+
+
+function calculateTip(amount, rating) {
+  let newRating = rating.toLowerCase();
+  if(newRating === 'terrible'){
+    return 0
+  } else if(newRating === 'poor'){
+    return Math.ceil(amount * 0.05)
+  } else if(newRating === 'good'){
+    return Math.ceil(amount * 0.1);
+  } else if(newRating === 'great'){
+    return Math.ceil(amount * 0.15);
+  } else if(newRating === 'excellent'){
+    return Math.ceil(amount * 0.2);
+  } else{
+    return "Rating not recognised";
+  }
+}
+
+// console.log(calculateTip (20, "Excellent"));
+// console.log(calculateTip (26.95, "good"));
