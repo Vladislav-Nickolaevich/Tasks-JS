@@ -2839,3 +2839,14 @@ function calculateTip(amount, rating) {
 
 // console.log(calculateTip (20, "Excellent"));
 // console.log(calculateTip (26.95, "good"));
+
+function myFirstKata(a, b) {
+  if (typeof(a) !== "number" || typeof(b) !== "number") {
+    return false;
+  } else {
+    return a % b + b % a;
+  }
+}
+
+// console.log(myFirstKata(3,5));
+// console.log(myFirstKata("hello",3));
