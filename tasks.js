@@ -2850,3 +2850,18 @@ function myFirstKata(a, b) {
 
 // console.log(myFirstKata(3,5));
 // console.log(myFirstKata("hello",3));
+
+
+function multiply(number){
+  let numLength = (String(number)).length;
+
+  return isFinite(String(number)[0])? 
+            number * Math.pow(5, numLength): 
+            number * Math.pow(5, numLength - 1);
+}
+
+// console.log( multiply(10));
+// console.log( multiply(5));
+// console.log( multiply(200));
+// console.log( multiply(0));
+// console.log( multiply(-2));
