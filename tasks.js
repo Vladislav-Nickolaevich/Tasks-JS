@@ -2885,3 +2885,12 @@ function well(x){
 // console.log(well(['bad', 'bad', 'bad']));
 // console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
 // console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
+
+
+function divisibleBy(numbers, divisor){
+  return numbers.filter(e => e % divisor === 0);
+}
+
+// console.log(divisibleBy([1,2,3,4,5,6], 2));
+// console.log(divisibleBy([1,2,3,4,5,6], 3));
+// console.log(divisibleBy([0,1,2,3,4,5,6], 4));
