@@ -2873,3 +2873,15 @@ function logs(x , a, b){
 
 // console.log(logs(10, 2, 3));
 // console.log(logs(5, 2, 3));
+
+
+function well(x){
+  let result =  x.map(e => e === 'good'? 1: 0).reduce((c,i) => c + i,0);
+  return result === 0? 'Fail!': 
+         result === 1 || result === 2? 'Publish!':
+         'I smell a series!';
+}
+
+// console.log(well(['bad', 'bad', 'bad']));
+// console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
+// console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
