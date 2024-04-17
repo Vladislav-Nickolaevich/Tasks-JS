@@ -2894,3 +2894,12 @@ function divisibleBy(numbers, divisor){
 // console.log(divisibleBy([1,2,3,4,5,6], 2));
 // console.log(divisibleBy([1,2,3,4,5,6], 3));
 // console.log(divisibleBy([0,1,2,3,4,5,6], 4));
+
+function monkeyCount(n) {
+  let result = [];
+  for(let i = 1; i <= n; i++ ){
+    result.push(i);
+  }
+  return result;
+}
+// console.log(monkeyCount(20));
