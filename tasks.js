@@ -2903,3 +2903,9 @@ function monkeyCount(n) {
   return result;
 }
 // console.log(monkeyCount(20));
+
+function twoDecimalPlaces(n) {
+  return +n.toFixed(2);
+  
+}
+// console.log(twoDecimalPlaces(4.659725356));
