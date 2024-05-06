@@ -2909,3 +2909,15 @@ function twoDecimalPlaces(n) {
   
 }
 // console.log(twoDecimalPlaces(4.659725356));
+
+
+function differenceInAges(ages){
+  let minAge = ages.sort((a,b) => a - b)[0];
+  let maxAge = ages.sort((a,b) => b - a)[0];
+  let difference = maxAge - minAge;
+
+  return [minAge, maxAge, difference];
+}
+
+// console.log(differenceInAges([82, 15, 6, 38, 35]));
+// console.log(differenceInAges([57, 99, 14, 32]));
