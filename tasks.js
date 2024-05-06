@@ -2921,3 +2921,18 @@ function differenceInAges(ages){
 
 // console.log(differenceInAges([82, 15, 6, 38, 35]));
 // console.log(differenceInAges([57, 99, 14, 32]));
+
+
+const cannonsReady = (gunners) => {
+  let arr = [];
+
+  for(let key in gunners){
+    arr.push(gunners[key]);
+  }
+  return (arr.find( e => e === 'nay'))?
+  'Shiver me timbers!': 'Fire!';
+};
+
+// console.log(cannonsReady({'Mike':'aye','Joe':'aye','Johnson':'aye','Peter':'aye'}));
+// console.log(cannonsReady({'Mike':'aye','Joe':'nay','Johnson':'aye','Peter':'aye'}));
+// console.log(cannonsReady({'Mike':'nay','Joe':'nay','Johnson':'nay','Peter':'nay'}));
