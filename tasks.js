@@ -2936,3 +2936,15 @@ const cannonsReady = (gunners) => {
 // console.log(cannonsReady({'Mike':'aye','Joe':'aye','Johnson':'aye','Peter':'aye'}));
 // console.log(cannonsReady({'Mike':'aye','Joe':'nay','Johnson':'aye','Peter':'aye'}));
 // console.log(cannonsReady({'Mike':'nay','Joe':'nay','Johnson':'nay','Peter':'nay'}));
+
+
+function NameMe(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+  this.name = this.firstName + ' ' + this.lastName;
+}
+
+// let n = new NameMe('John', 'Doe');
+// console.log(n.firstName);
+// console.log(n.lastName);
+// console.log(n.name);
