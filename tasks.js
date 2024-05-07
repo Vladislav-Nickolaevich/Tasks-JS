@@ -2966,3 +2966,7 @@ function leo(oscar){
 
 // console.log(leo(89));
 // console.log(leo(88));
+
+var templateStrings = (noun, adjective) => `${noun} are ${adjective}`;
+
+// console.log(templateStrings('Animals', 'Good'));
