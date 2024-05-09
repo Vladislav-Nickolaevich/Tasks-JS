@@ -2983,3 +2983,26 @@ function  calculateAge(a, b) {
 // console.log(calculateAge(2000, 1990));
 // console.log(calculateAge(3400, 3400));
 // console.log(calculateAge(2011, 2012));
+
+
+function fuelPrice(litres, pricePerLitre) {
+  let count = litres * pricePerLitre;
+  let result;
+  if(litres < 2){
+    result = count
+  } else if(litres >= 2 && litres < 4){
+    result = count - litres * 0.05;
+  } else if(litres >= 4 && litres < 6 ){
+    result = count - litres * 0.1;
+  }else if(litres >= 6 && litres < 8 ){
+    result = count - litres * 0.15;
+  }else if(litres >= 8 && litres < 10 ){
+    result = count - litres * 0.2;
+  }else {
+    result = count - litres * 0.25;
+  }
+  return +(result.toFixed(2));
+}
+// console.log(fuelPrice(5, 1.23));
+// console.log(fuelPrice(8, 2.5));
+// console.log(fuelPrice(5, 5.6));
