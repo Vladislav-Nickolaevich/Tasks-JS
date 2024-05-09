@@ -2970,3 +2970,16 @@ function leo(oscar){
 var templateStrings = (noun, adjective) => `${noun} are ${adjective}`;
 
 // console.log(templateStrings('Animals', 'Good'));
+
+
+function  calculateAge(a, b) {
+  return b === a - 1? "You will be born in 1 year.":
+         a === b? "You were born this very year!":
+         a > b? `You will be born in ${a - b} years.`:
+         b === a + 1? `You are 1 year old.`:
+         `You are ${b - a} years old.`;
+}
+// console.log(calculateAge(2012, 2016));
+// console.log(calculateAge(2000, 1990));
+// console.log(calculateAge(3400, 3400));
+// console.log(calculateAge(2011, 2012));
