@@ -3018,3 +3018,13 @@ var quote = function(fighter) {
 
 // console.log(quote('George Saint Pierre'));
 // console.log(quote('Conor McGregor'));
+
+
+function rainAmount(mm){
+  return mm < 40?
+  `You need to give your plant ${40 - mm}mm of water`:
+  "Your plant has had more than enough water for today!";
+}
+
+// console.log(rainAmount(100));
+// console.log(rainAmount(39));
