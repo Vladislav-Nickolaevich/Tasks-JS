@@ -3028,3 +3028,15 @@ function rainAmount(mm){
 
 // console.log(rainAmount(100));
 // console.log(rainAmount(39));
+
+function diff(a, b){
+  let newA = [...new Set(a)];
+  let newB = [...new Set(b)];
+  let arr = [];
+  newA.filter(e => !newB.includes(e)? arr.push(e): '')
+  newB.filter(e => !newA.includes(e)? arr.push(e): '')
+  return arr.sort((a,b) => a > b? 1: -1);
+}
+
+// console.log(diff(['a', 'a', 't', 'e', 'f', 'i', 'j'],
+//  ['t', 'g', 'g', 'i', 'k', 'f']));
