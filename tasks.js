@@ -3006,3 +3006,15 @@ function fuelPrice(litres, pricePerLitre) {
 // console.log(fuelPrice(5, 1.23));
 // console.log(fuelPrice(8, 2.5));
 // console.log(fuelPrice(5, 5.6));
+
+
+var quote = function(fighter) {
+  let name = 'george saint pierre';
+  let fighterLower = fighter.split(' ').map(e => e.toLowerCase()).join(' ');
+  return fighterLower.indexOf(name) === 0? 
+  "I am not impressed by your performance.":
+  "I'd like to take this chance to apologize.. To absolutely NOBODY!";
+};
+
+// console.log(quote('George Saint Pierre'));
+// console.log(quote('Conor McGregor'));
