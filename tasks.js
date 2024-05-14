@@ -3054,3 +3054,8 @@ function divisors(integer) {
 
 // console.log(divisors(15))
 // console.log(divisors(13))
+
+
+let withoutLast = arr => arr.slice(0, -1);
+
+// console.log(withoutLast([1, 2, 3, 4, 5]));
