@@ -3059,3 +3059,11 @@ function divisors(integer) {
 let withoutLast = arr => arr.slice(0, -1);
 
 // console.log(withoutLast([1, 2, 3, 4, 5]));
+
+function makeMeSlow() {
+  const start = Date.now();
+  while (Date.now() - start < 7000) {}
+  console.log("Slow function finished after at least 7 seconds");
+}
+
+// console.log(makeMoeSlow())
