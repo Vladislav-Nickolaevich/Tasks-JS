@@ -3040,3 +3040,17 @@ function diff(a, b){
 
 // console.log(diff(['a', 'a', 't', 'e', 'f', 'i', 'j'],
 //  ['t', 'g', 'g', 'i', 'k', 'f']));
+
+function divisors(integer) {
+  let arr = [];
+  for(let i = 2; i <= integer; i++){
+    
+    if(integer % i === 0){
+      arr.push(i);
+    } 
+  }
+  return arr.length > 1? arr.slice(0, arr.length - 1): `${integer} is prime`;
+}
+
+// console.log(divisors(15))
+// console.log(divisors(13))
