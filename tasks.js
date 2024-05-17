@@ -3074,3 +3074,16 @@ function sortGiftCode(code){
 }
 
 // console.log(sortGiftCode('zyxwvutsrqponmlkjihgfedcba'));
+
+function checkExam(array1, array2) {
+  let num = 0;
+  array1.filter((e,i) => 
+    e == array2[i]?
+    num +=4: 
+    e == '' || array2[i] == ''? num += 0:
+    num -=1
+  );
+  return num > 0? num: 0;
+ }
+
+//  console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
