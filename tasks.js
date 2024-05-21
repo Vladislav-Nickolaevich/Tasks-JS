@@ -3087,3 +3087,16 @@ function checkExam(array1, array2) {
  }
 
 //  console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
+
+
+function reverseSlice(str) {
+  let newArr = [];
+  let newStr = str.split('').reverse().join('');
+  for(let i = 0; i < newStr.length; i++){
+    newArr.push(newStr.slice(i));
+  }
+  return newArr;
+}
+
+// console.log(reverseSlice('123'));
+// console.log(reverseSlice('abcde'));
