@@ -3100,3 +3100,20 @@ function reverseSlice(str) {
 
 // console.log(reverseSlice('123'));
 // console.log(reverseSlice('abcde'));
+
+
+// const gap = i=>Math.max(...i.toString(2).split(/^0+|1+|0+$/).map(s=>s.length))
+
+
+function gap(num) {     
+  return num.toString(2)
+  .split(/^0+|1+|0+$/)
+  .sort()
+  .at(-1)
+  .length;
+}
+
+// console.log(gap(9));
+// console.log(gap(529));
+// console.log(gap(15));
+
