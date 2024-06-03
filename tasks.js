@@ -3132,3 +3132,17 @@ function differenceOfSquares(n) {
 
 // console.log(differenceOfSquares(5));
 // console.log(differenceOfSquares(10));
+
+
+function spot(s1,s2){
+  let result = []
+  s1.split('').map((e,i )=>{
+    if(e !== s2.split('')[i]){
+      result.push(i)
+    } 
+  });
+  return result;
+}
+
+// console.log(spot('abcdefg', 'abcqetg'));
+// console.log(spot('Hello World!', 'hello world.'));
