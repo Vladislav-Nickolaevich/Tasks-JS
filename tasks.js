@@ -3117,3 +3117,18 @@ function gap(num) {
 // console.log(gap(529));
 // console.log(gap(15));
 
+function differenceOfSquares(n) {
+  let sum = 0;
+  let squarSum = 0;
+  for(let i = 1; i <= n; i++){
+    sum += i;
+  }
+  for(let i = 1; i <= n; i++){
+    squarSum += i ** 2;
+  }
+
+  return (sum ** 2) - squarSum;
+}
+
+// console.log(differenceOfSquares(5));
+// console.log(differenceOfSquares(10));
