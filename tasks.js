@@ -3146,3 +3146,11 @@ function spot(s1,s2){
 
 // console.log(spot('abcdefg', 'abcqetg'));
 // console.log(spot('Hello World!', 'hello world.'));
+
+function isItLetter(character) {
+  let check = /[a-zA-Z]/gi
+  return character.match(check) != null
+}
+
+// console.log(isItLetter('a'));
+// console.log(isItLetter('1'));
