@@ -3154,3 +3154,10 @@ function isItLetter(character) {
 
 // console.log(isItLetter('a'));
 // console.log(isItLetter('1'));
+
+function testEven(n) {
+  return n % 2 === 0
+}
+// console.log(testEven(2));  
+// console.log(testEven(0.5));  
+// console.log(testEven(-4));  
