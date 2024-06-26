@@ -3161,3 +3161,13 @@ function testEven(n) {
 // console.log(testEven(2));  
 // console.log(testEven(0.5));  
 // console.log(testEven(-4));  
+
+function equableTriangle(a,b,c) {
+  let p = (a + b + c) / 2;
+  let s = p * (p - a) * (p - b) * (p - c);
+  return Math.sqrt(s) == p * 2;
+
+}
+
+// console.log(equableTriangle(5,12,13));
+// console.log(equableTriangle(2,3,4));
