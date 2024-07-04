@@ -3183,3 +3183,14 @@ function squeakyClean(arr) {
 }
 
 // console.log(squeakyClean(['click1','click2',null,'','','submitForm']));
+
+function sumOfIntegersInString(s) {
+  let check = /[^\d]/g
+  return s
+  .replace(check , ' ').split(' ')
+  .reduce((c,i) => +c + +i)
+}
+
+// console.log(sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"));
+// console.log(sumOfIntegersInString(',!ry5539tAS8758epoej1414PlQ1714G:gO2805phu,v'));
+// console.log(sumOfIntegersInString('2 + 3 = '));
