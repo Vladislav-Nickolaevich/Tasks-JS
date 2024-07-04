@@ -3171,3 +3171,9 @@ function equableTriangle(a,b,c) {
 
 // console.log(equableTriangle(5,12,13));
 // console.log(equableTriangle(2,3,4));
+
+function d01(a,b){
+  return [a].includes(b);
+}
+// console.log(d01(1,1));
+// console.log(d01(2,1));
