@@ -3177,3 +3177,9 @@ function d01(a,b){
 }
 // console.log(d01(1,1));
 // console.log(d01(2,1));
+
+function squeakyClean(arr) {
+  return arr.filter(Boolean);
+}
+
+// console.log(squeakyClean(['click1','click2',null,'','','submitForm']));
