@@ -3216,3 +3216,11 @@ function checkThreeAndTwo(array) {
 // console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"]));
 // console.log(checkThreeAndTwo(["a", "b", "c", "b", "c"]));
 // console.log(checkThreeAndTwo(["c","c","b","b","c"]));
+
+
+function* generator(a) {
+  for(let i = 1; ; i++){
+    yield `${a} x ${i} = ${a*i}`;
+  }
+}
+// console.log(generator(5));
