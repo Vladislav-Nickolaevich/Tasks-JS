@@ -3194,3 +3194,25 @@ function sumOfIntegersInString(s) {
 // console.log(sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"));
 // console.log(sumOfIntegersInString(',!ry5539tAS8758epoej1414PlQ1714G:gO2805phu,v'));
 // console.log(sumOfIntegersInString('2 + 3 = '));
+
+
+
+function checkThreeAndTwo(array) {
+  let checkA = array.map(e => e === 'a'? 1: 0).reduce((c,i) => c + i);
+  let checkB = array.map(e => e === 'b'? 1: 0).reduce((c,i) => c + i);
+  let checkC = array.map(e => e === 'c'? 1: 0).reduce((c,i) => c + i);
+
+  return checkA == 3 && checkB == 2?true:
+         checkA == 3 && checkC == 2?true:
+         checkA == 2 && checkB == 3?true:
+         checkA == 2 && checkC == 3?true:
+         checkB == 3 && checkC == 2?true:
+         checkB == 3 && checkC == 2?true:
+         checkB == 2 && checkC == 3?true:
+         checkB == 2 && checkC == 3?true:
+         false;
+}
+
+// console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"]));
+// console.log(checkThreeAndTwo(["a", "b", "c", "b", "c"]));
+// console.log(checkThreeAndTwo(["c","c","b","b","c"]));
