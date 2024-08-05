@@ -3236,3 +3236,22 @@ function missingNo(nums) {
 
 // console.log(missingNo( [9, 45, 53, 10, 100, 30, 85, 72, 69, 93, 98, 27, 73, 82, 91, 60, 5, 79, 88, 18, 71, 36, 44, 22, 89, 40, 59, 80, 81, 67, 25, 54, 13, 64, 56, 39, 48, 92, 84, 94, 87, 90, 77, 63, 32, 68, 37, 96, 23, 0, 95, 1, 52, 78, 6, 57, 50, 2, 46, 19, 76, 47, 14, 4, 3, 29, 17, 11, 21, 24, 74, 65, 12, 83, 28, 41, 66, 7, 58, 55, 51, 43, 97, 42, 86, 49, 31, 20, 75, 70, 34, 33, 38, 8, 15, 62, 35, 61, 99, 16]));  
 // console.log(missingNo([26, 0, 75, 87, 33, 52, 37, 59, 27, 4, 54, 15, 24, 7, 21, 82, 98, 79, 34, 25, 1, 99, 5, 10, 96, 97, 65, 85, 47, 28, 81, 70, 74, 11, 38, 45, 84, 13, 41, 2, 86, 39, 29, 43, 19, 31, 18, 58, 14, 77, 69, 32, 6, 66, 61, 62, 50, 53, 8, 80, 72, 9, 68, 35, 42, 73, 83, 71, 92, 95, 63, 51, 16, 17, 64, 22, 44, 91, 30, 76, 12, 3, 46, 60, 36, 56, 88, 89, 100, 78, 90, 49, 55, 48, 23, 93, 57, 67, 20, 94]));
+
+
+function myLanguages(results) {
+  let result = [];
+
+  Object.entries(results).map(e => {
+    return {
+      language: e[0],
+      number: e[1]
+    };
+  }).sort((a,b) => a.number > b.number? -1: 1)
+  .filter(e => e.number >= 60  && result.push(e.language));
+  return result;
+}
+
+// console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65}));
+// console.log(myLanguages({"C++" : 50, "ASM" : 10, "Haskell" : 20}));
+// console.log(myLanguages({Bulgarian: 3,Maltese: 21, Korean: 39,German: 61,Russian: 82,Czech: 2,
+// Lithuanian: 79}));
