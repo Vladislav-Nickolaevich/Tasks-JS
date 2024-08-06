@@ -3339,3 +3339,10 @@ function fizzBuzzCuckooClock(time) {
 // console.log(fizzBuzzCuckooClock("21:00"));
 // console.log(fizzBuzzCuckooClock("00:03"));
 // console.log(fizzBuzzCuckooClock("00:15"));
+
+
+const obfuscate = function(email) {
+  return email.split('').map(e => e == '.'? ' [dot] ': e == '@'? ' [at] ': e).join('');
+}
+
+// console.log(obfuscate('test@123.com'));
