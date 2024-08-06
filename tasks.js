@@ -3296,3 +3296,46 @@ function broken(x){
 }
 
 // console.log(broken("10000000101101111110011001000"));
+
+
+function fizzBuzzCuckooClock(time) {
+    let min = time.split('').slice(3).join('');
+    let hour = time.split('').slice(0,2).join('');
+    
+    let obj = {
+      13: 1,14: 2,15: 3,16: 4,17: 5,18: 6, 19: 7, 20: 8, 21: 9, 22: 10, 23: 11, '00': 12
+    };
+
+    if(min == '00'){
+      let str = '';
+      let num = hour;
+      for(let key in obj){
+        if(key == hour){
+          num = obj[key];
+        }
+      }
+      for(let i = 0; i < num; i++){
+        str += 'Cuckoo ';
+      }
+
+      return str.slice(0, -1);
+
+    } else if(min === '30'){
+      return 'Cuckoo';
+    } else if(Number.isInteger(min / 5) && Number.isInteger(min / 3)){
+      return 'Fizz Buzz';
+    } else if(Number.isInteger(min / 3)){
+      return 'Fizz';
+    } else if(Number.isInteger(min / 5)){
+      return 'Buzz';
+    } else {
+      return 'tick';
+    }
+}
+
+
+// console.log(fizzBuzzCuckooClock("13:34"));
+// console.log(fizzBuzzCuckooClock("00:00"));
+// console.log(fizzBuzzCuckooClock("21:00"));
+// console.log(fizzBuzzCuckooClock("00:03"));
+// console.log(fizzBuzzCuckooClock("00:15"));
