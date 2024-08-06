@@ -3255,3 +3255,37 @@ function myLanguages(results) {
 // console.log(myLanguages({"C++" : 50, "ASM" : 10, "Haskell" : 20}));
 // console.log(myLanguages({Bulgarian: 3,Maltese: 21, Korean: 39,German: 61,Russian: 82,Czech: 2,
 // Lithuanian: 79}));
+
+
+function boredom(staff){
+  let obj = {
+    accounts: 1,
+    finance: 10,
+    canteen: 10,
+    regulation: 3,
+    trading: 6,
+    change: 6,
+    IS: 8,
+    retail: 5,
+    cleaning: 4,
+    'pissing about': 25
+  };
+  let arr = [];
+  Object.values(staff).map(e => {
+    for(key in obj){
+      if(key == e){
+         arr.push(obj[key])        
+      }
+    }
+  });
+  let result = arr.reduce((c,i) => c + i);
+
+  return result <= 80? 'kill me now':
+  result < 100 && result > 80?  'i can handle this':
+  'party time!!';
+}
+
+// console.log(boredom({tim: 'change', jim: 'accounts', randy: 'canteen', sandy: 'change', andy: 'change', katie: 'IS',laura: 'change', saajid: 'IS', alex: 'trading', john: 'accounts',mr: 'finance' }));
+// console.log(boredom({ tim: 'canteen', jim: 'change', randy: 'finance', sandy: 'canteen',
+// andy: 'canteen', katie: 'trading', laura: 'finance', saajid: 'trading',alex: 'canteen',
+// john: 'finance',mr: 'regulation' }));
