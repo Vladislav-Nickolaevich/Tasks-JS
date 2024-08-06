@@ -3289,3 +3289,10 @@ function boredom(staff){
 // console.log(boredom({ tim: 'canteen', jim: 'change', randy: 'finance', sandy: 'canteen',
 // andy: 'canteen', katie: 'trading', laura: 'finance', saajid: 'trading',alex: 'canteen',
 // john: 'finance',mr: 'regulation' }));
+
+
+function broken(x){
+  return x.split('').map(e => e == '1'? '0': '1').join('');
+}
+
+// console.log(broken("10000000101101111110011001000"));
