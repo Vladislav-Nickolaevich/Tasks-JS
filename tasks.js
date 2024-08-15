@@ -3362,3 +3362,11 @@ return [Math.min(...arr), Math.max(...arr)];
 // console.log(getMinMax([1]));
 // console.log(getMinMax([11, 4, 6]));
 
+
+
+function isToday(date) {
+  return date.toDateString() === new Date().toDateString()
+}
+
+// const today = new Date();
+// console.log(isToday(today));
