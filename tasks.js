@@ -3346,3 +3346,10 @@ const obfuscate = function(email) {
 }
 
 // console.log(obfuscate('test@123.com'));
+
+
+function doubleEveryOther(a) {
+  return a.map((e,i) => i % 2 !== 0? e * 2: e);
+}
+
+// console.log(doubleEveryOther([1,2,3,4]));
