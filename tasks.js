@@ -3353,3 +3353,12 @@ function doubleEveryOther(a) {
 }
 
 // console.log(doubleEveryOther([1,2,3,4]));
+
+
+function getMinMax(arr){
+return [Math.min(...arr), Math.max(...arr)];
+};
+
+// console.log(getMinMax([1]));
+// console.log(getMinMax([11, 4, 6]));
+
