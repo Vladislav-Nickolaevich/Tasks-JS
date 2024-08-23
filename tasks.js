@@ -3370,3 +3370,14 @@ function isToday(date) {
 
 // const today = new Date();
 // console.log(isToday(today));
+
+
+function getGrade (s1, s2, s3) {
+  let average = (s1 + s2 + s3) / 3;
+  return 90 <= average?'A':
+  80 <= average? 	'B':
+  70 <= average? 'C':
+  60 <= average? 'D': 'F';
+}
+
+// console.log(getGrade(95,90,93));
