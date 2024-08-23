@@ -3381,3 +3381,10 @@ function getGrade (s1, s2, s3) {
 }
 
 // console.log(getGrade(95,90,93));
+
+
+function remove (string) {
+  return string.replace(/!/g, '') + "!";
+}
+
+// console.log(remove("Hi!!!"));
