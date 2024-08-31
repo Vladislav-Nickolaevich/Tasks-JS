@@ -3408,3 +3408,18 @@ function validateCode(code){
 }
 
 // console.log(validateCode(213));
+
+
+function isTuringEquation(s){
+  let arr = s.split('').reverse().join('').replace('=', ' ').split(' ');
+  let numOne = arr[0];
+  let numTwo = arr[1].split('+').reduce((c,i) => +c + +i);
+  return numTwo == numOne;
+  
+}
+
+// console.log(isTuringEquation("73+42=16"));
+// console.log(isTuringEquation("5+8=13"));
+
+
+
