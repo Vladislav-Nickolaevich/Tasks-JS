@@ -3395,3 +3395,16 @@ function reverse(string){
 }
 
 // console.log(reverse('I am an expert at this'));
+
+function validateCode(code){
+  switch((String(code))[0]){
+    case '1':
+    case '2':
+    case '3':
+      return true;
+    default:
+      return false;
+  }
+}
+
+// console.log(validateCode(213));
