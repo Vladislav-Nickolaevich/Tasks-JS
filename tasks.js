@@ -3423,3 +3423,22 @@ function isTuringEquation(s){
 
 
 
+function bearDollars(arr) {
+  if(arr.length == 0){
+    return 0;
+  }
+  return arr.map(e => {
+    if( Object.values(e)[1].toLowerCase() === 'close friend'){
+      return Object.values(e)[0] * 25;
+    } else if(Object.values(e)[1].toLowerCase() === 'acquaintance' ){
+      return Object.values(e)[0] * 100;
+    } else if(Object.values(e)[1].toLowerCase() === 'friend' ){
+      return Object.values(e)[0] * 50;
+    } else{
+      return Object.values(e)[0] * 125;
+    } 
+  }).reduce((c,i) => c + i);
+}
+
+// console.log(bearDollars([[10, 'Close Friend'], [3, 'Acquaintance'], [7, 'Lead from web'], [6, 'Friend'], [2, 'It came from Facebook']]));
+
